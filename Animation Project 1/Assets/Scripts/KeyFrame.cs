@@ -8,5 +8,5 @@ public class KeyFrame
     Vector3 keyPosition;
     Vector3 keyRotation;
 
-    float atDuration;
+	int atFrame;
 }

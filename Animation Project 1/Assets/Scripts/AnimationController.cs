@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationController : ScriptableObject
 {
     public List<KeyFrame> keyFrames;
-    public float totalDuration;
+    public int totalFrame;
 
     public int currentKeyFrame;
     public float currentDuration;
