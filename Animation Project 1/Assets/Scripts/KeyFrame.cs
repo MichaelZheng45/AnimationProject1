@@ -5,8 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class KeyFrame
 {
-    Vector3 keyPosition;
-    Vector3 keyRotation;
+    public Vector3 keyPosition;
+    public Vector3 keyRotation;
 
-	int atFrame;
+	public int atFrame;
+
+    public KeyFrame(Vector3 newPosition)
+    {
+        atFrame = 0;
+        keyPosition = keyPosition;
+    }
 }

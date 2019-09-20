@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : ScriptableObject
+[CreateAssetMenu(fileName = "AnimationData", menuName = "ScriptableObjects/AnimationData", order = 1)]
+public class AnimationData : ScriptableObject
 {
     public List<KeyFrame> keyFrames;
     public int totalFrame;
