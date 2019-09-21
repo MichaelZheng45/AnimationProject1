@@ -6,10 +6,7 @@ using UnityEngine;
 public class AnimationData : ScriptableObject
 {
     public List<KeyFrame> keyFrames;
-    public int totalFrame;
-
-    public int currentKeyFrame;
-    public float currentDuration;
+    public int totalFrameDuration;
 }
 
 //functions

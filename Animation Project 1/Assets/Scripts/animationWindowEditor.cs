@@ -8,10 +8,11 @@ public class animationWindowEditor : EditorWindow
 	int lineBasePosY = 200;
 	int lineMaxPosY =300;
 	int lineMaxPosX = 400;
-
+    int xShift = 50;
     public AnimationData animData;
     public GameObject animObject;
 	int currentKeyframe;
+
     [MenuItem("Window/AnimationHandler")]
     public static void ShowWindow()
     {
@@ -26,44 +27,96 @@ public class animationWindowEditor : EditorWindow
 
     private void OnGUI()
     {
-		Rect rectangle = new Rect(new Vector2(0, lineBasePosY), new Vector2(lineMaxPosX, lineMaxPosY-lineBasePosY));
+        Rect rectangle = new Rect(new Vector2(xShift, lineBasePosY), new Vector2(lineMaxPosX, lineMaxPosY-lineBasePosY));
 		EditorGUI.DrawRect(rectangle, Color.gray);
-		animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationData), true) as AnimationData;
-        animObject = EditorGUILayout.ObjectField("AnimationObject", animData, typeof(GameObject), true) as GameObject;
+
+        animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationData), true) as AnimationData;
+        animObject = EditorGUILayout.ObjectField("AnimationObject", animObject, typeof(GameObject), true) as GameObject;
 
         if (animData != null && animObject != null)
         {
-            if (animData.keyFrames == null && animObject != null)
+            //set data
+            int keyCount = animData.keyFrames.Count;
+            if (animData.keyFrames.Count == 0 && animObject != null)
             {
+                animData.totalFrameDuration = 1;
                 animData.keyFrames = new List<KeyFrame>();
                 animData.keyFrames.Add(new KeyFrame(animObject.transform.position));
                 currentKeyframe = 0;
             }
 
-            GUILayout.Label("Key Frame Count: " +  animData.keyFrames.Count, EditorStyles.miniLabel);
-			animData.totalFrame = EditorGUILayout.IntField("Frame Duration: ",animData.totalFrame);
+            GUILayout.Label("Animation Data Base Setting", EditorStyles.boldLabel);
+            GUILayout.Label("Key Frame Count: " +  keyCount, EditorStyles.miniLabel);
+			animData.totalFrameDuration = EditorGUILayout.IntField("Frame Duration: ",animData.totalFrameDuration);
+            int tempCurrentFrame = EditorGUILayout.IntField("Current Key: ", currentKeyframe + 1);
+            currentKeyframe = tempCurrentFrame - 1;
+            if(currentKeyframe > keyCount)
+            {
+                currentKeyframe = keyCount;
+            }
+            else if(currentKeyframe < 0)
+            {
+                currentKeyframe = 0;
+            }
 
-			//create new key frame button and set current keyframe to it
-			//draw out a visual representation
-			//for loop for each keyframe, then draw another line for current key frame but with different color
-			foreach(KeyFrame keyF in animData.keyFrames)
+            //create new key frame button and set current keyframe to it
+            //draw out a visual representation
+            //for loop for each keyframe, then draw another line for current key frame but with different color
+            foreach (KeyFrame pKeyF in animData.keyFrames)
 			{
-                drawLine(keyF, animData.totalFrame, Color.red);
+                drawLine(pKeyF, animData.totalFrameDuration, Color.red);
 			}
-
             //draw current keyframe line
-            drawLine(animData.keyFrames[currentKeyframe], animData.totalFrame, Color.green);
-			GUILayout.Space(200);
+            drawLine(animData.keyFrames[currentKeyframe], animData.totalFrameDuration, Color.green);
 
-			//display current keyframe stats, duration cannot be more than max "TO DO"
+            GUILayout.Space(200);
+
+            //display current keyframe stats, duration cannot be more than max "TO DO"
+            GUILayout.Label("Current Key Settings", EditorStyles.boldLabel);
+            KeyFrame keyF = animData.keyFrames[currentKeyframe];
+            int atFrame = keyF.atFrame;
+            atFrame = EditorGUILayout.IntField("At Frame: ", atFrame);
+            if(atFrame > animData.totalFrameDuration)
+            {
+                atFrame = animData.totalFrameDuration;
+            }
+            else if(atFrame < 0)
+            {
+                atFrame = 0;
+            }
+            keyF.atFrame = atFrame;
+
+            GUILayout.Label("Key Data", EditorStyles.miniLabel);
+            keyF.keyPosition = EditorGUILayout.Vector3Field("Position: ", keyF.keyPosition);
+            
+            if(GUILayout.Button("Set new transform"))
+            {
+                keyF.keyPosition = animObject.transform.position;
+            }
 
             //sort the list
-			
+            sortList();
 
-            //add new key
-            //add it to the begninning
-            //set current key to that
-		}
+            GUILayout.Space(50);
+            GUILayout.Label("Add/Delete Keys", EditorStyles.boldLabel);
+            if (GUILayout.Button("Add new key"))
+            {
+                //add new key
+                //add it to the begninning
+                //set current key to that
+                animData.keyFrames.Insert(0, new KeyFrame(animObject.transform.position));
+                currentKeyframe = 0;
+            }
+
+            //delete currentKey
+            if(GUILayout.Button("Delete Current Key"))
+            {
+                //delete current key
+                //set currentindex to 0
+                animData.keyFrames.RemoveAt(currentKeyframe);
+                currentKeyframe = 0;
+            }
+        }
 
         /*
         GUILayout.Label("Base Settings", EditorStyles.boldLabel);
@@ -78,15 +131,42 @@ public class animationWindowEditor : EditorWindow
     //sort list
     void sortList()
     {
+        List<KeyFrame> frameList = animData.keyFrames;
+        KeyFrame currentKey = animData.keyFrames[currentKeyframe];
 
+
+        for (int i = 1; i < frameList.Count; i++)
+        {
+            KeyFrame tempKey = frameList[i];
+            bool placed = false;
+            int index = i;
+            while (!placed && index >= 0)
+            {
+                if(frameList[index].atFrame > frameList[index - 1 ].atFrame)
+                {
+                    frameList.RemoveAt(i);
+                    frameList.Insert(index, tempKey);
+                    placed = true;
+                }
+
+                index--;
+                if(index == 0 && !placed)
+                {
+                    frameList.RemoveAt(i);
+                    frameList.Insert(0, tempKey);
+                    placed = true;
+                }
+            }
+            animData.keyFrames = frameList;
+            currentKeyframe = animData.keyFrames.IndexOf(currentKey);
+        }
     }
 
     void drawLine(KeyFrame keyF, int totalDuration, Color colorL)
     {
         //line pos = maxPos * (keyduration/maxDuration) 
-        float xPos = lineMaxPosX * (keyF.atFrame / totalDuration);
-
-        Vector3 startPosition = new Vector3(xPos,lineBasePosY);
+        float xPos = (lineMaxPosX) * ((float)keyF.atFrame / (float)totalDuration) + xShift;
+        Vector3 startPosition = new Vector3(xPos, lineBasePosY);
         Vector3 endPosition = new Vector3(xPos,lineMaxPosY);
 
         Handles.BeginGUI();

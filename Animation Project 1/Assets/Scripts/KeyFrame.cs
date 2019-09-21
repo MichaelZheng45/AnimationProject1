@@ -13,6 +13,6 @@ public class KeyFrame
     public KeyFrame(Vector3 newPosition)
     {
         atFrame = 0;
-        keyPosition = keyPosition;
+        keyPosition = newPosition;
     }
 }
