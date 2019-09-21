@@ -35,8 +35,7 @@ public class animationWindowEditor : EditorWindow
 
         if (animData != null && animObject != null)
         {
-            //set data
-            int keyCount = animData.keyFrames.Count;
+            //set data  
             if (animData.keyFrames.Count == 0 && animObject != null)
             {
                 animData.totalFrameDuration = 1;
@@ -44,6 +43,7 @@ public class animationWindowEditor : EditorWindow
                 animData.keyFrames.Add(new KeyFrame(animObject.transform.position));
                 currentKeyframe = 0;
             }
+            int keyCount = animData.keyFrames.Count;
 
             GUILayout.Label("Animation Data Base Setting", EditorStyles.boldLabel);
             GUILayout.Label("Key Frame Count: " +  keyCount, EditorStyles.miniLabel);

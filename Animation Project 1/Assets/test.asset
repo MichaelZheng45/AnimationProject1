@@ -14,5 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimationData
   keyFrames: []
   totalFrameDuration: 0
-  currentKeyFrame: 0
-  currentDuration: 0
