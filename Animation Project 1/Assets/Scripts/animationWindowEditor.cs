@@ -36,7 +36,7 @@ public class animationWindowEditor : EditorWindow
         if (animData != null && animObject != null)
         {
             //set data  
-            if (animData.keyFrames.Count == 0 && animObject != null)
+            if (animData.keyFrames == null||animData.keyFrames.Count == 0)
             {
                 animData.totalFrameDuration = 1;
                 animData.keyFrames = new List<KeyFrame>();

@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1861f8f75fb0584090c91d8c71ce536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animData: {fileID: 11400000, guid: 4ec4cb0ce4c09df4182e267149e3760c, type: 2}
+  animData: {fileID: 11400000, guid: 5e16f06f4771fe94fb0dd305f4a7c75f, type: 2}
   play: 1
 --- !u!135 &487261383
 SphereCollider:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AnimationData", menuName = "ScriptableObjects/AnimationData", order = 1)]
+[System.Serializable]
 public class AnimationData : ScriptableObject
 {
     public List<KeyFrame> keyFrames;
