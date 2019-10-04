@@ -4,10 +4,12 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "AnimationData", menuName = "ScriptableObjects/AnimationData", order = 1)]
 [System.Serializable]
-public class AnimationData : ScriptableObject
+public abstract class AnimationData : ScriptableObject
 {
-    public List<KeyFrame> keyFrames;
+    public List<KeyFrame> keyFrames; //will be keyframePoses->single has one, hierarchy has multiple
     public int totalFrameDuration;
+    public int keyFrameCount;
+    public int framePerSecond;
 }
 
 //functions
