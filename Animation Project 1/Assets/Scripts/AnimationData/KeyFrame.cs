@@ -7,8 +7,13 @@ public class KeyFrame
 {
     public Vector3 keyPosition;
     public Vector3 keyRotation;
-    public float scale;
 	public int atFrame;
+
+    public KeyFrame()
+    {
+        atFrame = 0;
+        keyPosition = Vector3.zero;
+    }
 
     public KeyFrame(Vector3 newPosition)
     {

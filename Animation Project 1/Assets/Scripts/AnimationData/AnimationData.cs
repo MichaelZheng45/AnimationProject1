@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AnimationData", menuName = "ScriptableObjects/AnimationData", order = 1)]
-[System.Serializable]
+
 public abstract class AnimationData : ScriptableObject
 {
     public List<KeyFrame> keyFrames; //will be keyframePoses->single has one, hierarchy has multiple
