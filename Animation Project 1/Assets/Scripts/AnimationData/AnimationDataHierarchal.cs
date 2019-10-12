@@ -29,6 +29,10 @@ public class AnimationDataHierarchal : AnimationData
 
     public void generateFrames(int count)
     {
+        //htr has same amount of keyframes as there is the total duration
+        keyFrameCount = count;
+        totalFrameDuration = count;
+
         for(int i = 0; i < poseBase.Length; i++)
         {
             poseBase[i].keyFrames = new List<KeyFrame>();

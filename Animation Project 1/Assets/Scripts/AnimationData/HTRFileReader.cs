@@ -21,6 +21,7 @@ public struct DataInput
     public Vector3 rotation;
     public float boneLength;
     public float scaleFactor;
+    public int frame;
 }
 
 
@@ -83,13 +84,12 @@ public class HTRFileReader : EditorWindow
         //for setting hierarchy
         int jointCount = 0; //keep track of the where the index it is putting in the basepose
         List<string> jointIndexList = new List<string>(); //keeps track of the string names for easier hierarchy building/checking
+        string currentJoint = ""; //for keyframing
 
         while (!done)
         {
-            Debug.Log("starting");
             string textLine = "";
-            Debug.Log(curMode);
-            if (readLine(ref textLine,ref reader))
+            if (readLine(ref textLine,ref reader, ref currentJoint))
             {
                 if(curMode == currentHTRMode.SEGMENTHIERARCHY)
                 {
@@ -119,9 +119,74 @@ public class HTRFileReader : EditorWindow
                     animData.poseBase[index].baseRotation = data.rotation;
                     animData.poseBase[index].boneLength = data.boneLength;
                 }
+                else if(curMode == currentHTRMode.FRAMING)
+                {
+                    DataInput data = superParseDataIntoInputKeyFrame(textLine);
+                    int index = jointIndexList.IndexOf(currentJoint);
+                    Debug.Log(currentJoint);
+                    animData.poseBase[index].keyFrames[data.frame].keyPosition = data.transform;
+                    animData.poseBase[index].keyFrames[data.frame].keyRotation = data.rotation;
+                    animData.poseBase[index].keyFrames[data.frame].scale = data.scaleFactor;
+                }
             }
         }
         
+    }
+
+    DataInput superParseDataIntoInputKeyFrame(string textBlock)
+    {
+        DataInput newInput = new DataInput();
+        int indexer = 0;
+        //0 = frame
+        // 1-3 = transform xyz
+        // 4-7 = rotation xyz euler
+        // 8 = scale
+        int charCount = 0;
+        string newText = "";
+        while (charCount < textBlock.Length)
+        {
+            char dat = textBlock[charCount];
+            if (dat == '\t')
+            {
+                //encountered tab, determine where the text it will go into based on index
+                switch (indexer)
+                {
+                    case 0:
+                        newInput.frame = int.Parse(newText);
+                        break;
+                    case 1:
+                        newInput.transform += new Vector3(float.Parse(newText), 0, 0);
+                        break;
+                    case 2:
+                        newInput.transform += new Vector3(0, float.Parse(newText), 0);
+                        break;
+                    case 3:
+                        newInput.transform += new Vector3(0, 0, float.Parse(newText));
+                        break;
+                    case 4:
+                        newInput.rotation += new Vector3(float.Parse(newText), 0, 0);
+                        break;
+                    case 5:
+                        newInput.rotation += new Vector3(0, float.Parse(newText), 0);
+                        break;
+                    case 6:
+                        newInput.rotation += new Vector3(0, 0, float.Parse(newText));
+                        break;
+                }
+                //update to next index and reset text
+                indexer++;
+                newText = "";
+            }
+            else
+            {
+                newText += dat;
+            }
+
+            charCount++;
+        }
+
+        newInput.scaleFactor = float.Parse(newText); //add the last text
+        return newInput;
     }
 
     DataInput superParseDataIntoInputBase(string textBlock)
@@ -147,28 +212,22 @@ public class HTRFileReader : EditorWindow
                         newInput.name = newText;
                         break;
                     case 1:
-                        newInput.transform += new Vector3(int.Parse(newText), 0, 0);
+                        newInput.transform += new Vector3(float.Parse(newText), 0, 0);
                         break;
                     case 2:
-                        newInput.transform += new Vector3(0, int.Parse(newText), 0);
+                        newInput.transform += new Vector3(0, float.Parse(newText), 0);
                         break;
                     case 3:
-                        newInput.transform += new Vector3(0, 0, int.Parse(newText));
+                        newInput.transform += new Vector3(0, 0, float.Parse(newText));
                         break;
                     case 4:
-                        newInput.transform += new Vector3(int.Parse(newText), 0, 0);
+                        newInput.rotation += new Vector3(float.Parse(newText), 0, 0);
                         break;
                     case 5:
-                        newInput.rotation += new Vector3(int.Parse(newText), 0, 0);
+                        newInput.rotation += new Vector3(0, float.Parse(newText), 0);
                         break;
                     case 6:
-                        newInput.rotation += new Vector3(0, int.Parse(newText), 0);
-                        break;
-                    case 7:
-                        newInput.rotation += new Vector3(0, 0, int.Parse(newText));
-                        break;
-                    case 8:
-                        newInput.boneLength = int.Parse(newText);
+                        newInput.rotation += new Vector3(0, 0, float.Parse(newText));
                         break;
                 }
                 //update to next index and reset text
@@ -183,6 +242,7 @@ public class HTRFileReader : EditorWindow
             charCount++;
         }
 
+        newInput.boneLength = float.Parse(newText); //add the last text
         return newInput;
     }
 
@@ -269,7 +329,7 @@ public class HTRFileReader : EditorWindow
     }
 
     //checks the line if it has # or [
-    bool readLine(ref string textLine,ref StreamReader inReader)
+    bool readLine(ref string textLine,ref StreamReader inReader, ref string joint)
     {
         textLine = inReader.ReadLine();
 
@@ -294,11 +354,17 @@ public class HTRFileReader : EditorWindow
             else if(textLine == "[EndOfFile]")
             {
                 curMode = currentHTRMode.END;
+                done = true;
             }
             else
             {
-                done = true;
+                //read in [joingName] for processing
+                joint = "";
                 curMode = currentHTRMode.FRAMING;
+                for(int i = 1; i < textLine.Length-1; i++)
+                {
+                    joint += textLine[i];
+                }
             }
             return false;
         }
