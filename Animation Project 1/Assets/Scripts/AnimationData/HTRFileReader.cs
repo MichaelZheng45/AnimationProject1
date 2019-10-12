@@ -14,11 +14,24 @@ public enum currentHTRMode
 
 }
 
+public struct DataInput
+{
+    public string name;
+    public Vector3 transform;
+    public Vector3 rotation;
+    public float boneLength;
+    public float scaleFactor;
+}
+
+
 public class HTRFileReader : EditorWindow
 {
     AnimationDataHierarchal animData;
     string path = "Assets/";
     currentHTRMode curMode;
+
+    bool done = false;
+
     [MenuItem("Window/HTR Input")]
     public static void ShowWindow()
     {
@@ -45,6 +58,8 @@ public class HTRFileReader : EditorWindow
 
     void processFile()
     {
+        done = false;
+
         StreamReader reader = new StreamReader(path);
         //read header
         curMode = 0;
@@ -54,26 +69,145 @@ public class HTRFileReader : EditorWindow
         Debug.Log(reader.ReadLine());
         Debug.Log(reader.ReadLine());
         Debug.Log(reader.ReadLine());
-        Debug.Log(readToSpaceInt(reader.ReadLine()));
-       // animData.createBase(int.Parse(reader.ReadLine()));
-        /*
-        while (!reader.EndOfStream)
-        {
+        animData.createBase(readToSpaceInt(reader.ReadLine())); // number of segments
+        animData.generateFrames(readToSpaceInt(reader.ReadLine())); //number of frames
+        animData.setFramePerSecond(readToSpaceInt(reader.ReadLine())); //frame rate
+        Debug.Log(reader.ReadLine()); //rotation order
+        animData.setCalibrationUnit(readToSpaceString(reader.ReadLine())); //calibration units
+        Debug.Log(reader.ReadLine()); //rotation units
+        Debug.Log(reader.ReadLine()); //globalaxisofGravity
+        Debug.Log(reader.ReadLine()); //bone length axis
+        animData.scaleFactor = readToSpaceFloat(reader.ReadLine()); //scale factor
+        //end of header
 
+        //for setting hierarchy
+        int jointCount = 0; //keep track of the where the index it is putting in the basepose
+        List<string> jointIndexList = new List<string>(); //keeps track of the string names for easier hierarchy building/checking
+
+        while (!done)
+        {
+            Debug.Log("starting");
             string textLine = "";
+            Debug.Log(curMode);
             if (readLine(ref textLine,ref reader))
             {
+                if(curMode == currentHTRMode.SEGMENTHIERARCHY)
+                {
+                    string first = "", second = "";
+                    parseTextToTwoBetweenTab(ref first, ref second, textLine); //find the two strings
 
+                    //add and update joint
+                    animData.poseBase[jointCount].name = first;
+                    jointIndexList.Add(first);
+
+                    if(second != "GLOBAL")
+                    {
+                        animData.poseBase[jointCount].parentNodeIndex = jointIndexList.IndexOf(second);
+                    }
+                    else
+                    {
+                        animData.poseBase[jointCount].parentNodeIndex = -1;
+                    }
+
+                    jointCount++;
+                }
+                else if(curMode == currentHTRMode.BASE_POSITION)
+                {
+                    DataInput data = superParseDataIntoInputBase(textLine);
+                    int index = jointIndexList.IndexOf(data.name);
+                    animData.poseBase[index].basePosition = data.transform;
+                    animData.poseBase[index].baseRotation = data.rotation;
+                    animData.poseBase[index].boneLength = data.boneLength;
+                }
             }
         }
-        */
+        
     }
 
-    void checkBracket()
+    DataInput superParseDataIntoInputBase(string textBlock)
     {
+        DataInput newInput = new DataInput();
+        int indexer = 0; //keeps track of which block to put it in
+        // 0 = name
+        // 1-3 = transform xyz
+        // 4-7 = rotation xyz euler
+        // 8 = bone length
 
+        int charCount = 0;
+        string newText = "";
+        while(charCount < textBlock.Length)
+        {
+            char dat = textBlock[charCount];
+            if(dat == '\t')
+            {
+                //encountered tab, determine where the text it will go into based on index
+                switch(indexer)
+                {
+                    case 0:
+                        newInput.name = newText;
+                        break;
+                    case 1:
+                        newInput.transform += new Vector3(int.Parse(newText), 0, 0);
+                        break;
+                    case 2:
+                        newInput.transform += new Vector3(0, int.Parse(newText), 0);
+                        break;
+                    case 3:
+                        newInput.transform += new Vector3(0, 0, int.Parse(newText));
+                        break;
+                    case 4:
+                        newInput.transform += new Vector3(int.Parse(newText), 0, 0);
+                        break;
+                    case 5:
+                        newInput.rotation += new Vector3(int.Parse(newText), 0, 0);
+                        break;
+                    case 6:
+                        newInput.rotation += new Vector3(0, int.Parse(newText), 0);
+                        break;
+                    case 7:
+                        newInput.rotation += new Vector3(0, 0, int.Parse(newText));
+                        break;
+                    case 8:
+                        newInput.boneLength = int.Parse(newText);
+                        break;
+                }
+                //update to next index and reset text
+                indexer++;
+                newText = "";
+            }
+            else
+            {
+                newText += dat;
+            }
+
+            charCount++;
+        }
+
+        return newInput;
     }
 
+    void parseTextToTwoBetweenTab(ref string first, ref string second, string main)
+    {
+        bool spaceEncountered = false;
+        for(int i = 0; i<main.Length; i++)
+        {
+            char dat = main[i];
+            if(dat == '\t')
+            {
+                spaceEncountered = true;
+            }
+            else if(spaceEncountered)
+            {
+                second += dat;
+            }
+            else
+            {
+                first += dat;
+            }
+        }
+    }
+
+    //reads in an int, ignores the first text "name: " then gets the int after.
     int readToSpaceInt(string text)
     {
         string newText = "";
@@ -92,6 +226,46 @@ public class HTRFileReader : EditorWindow
             }
         }
         return int.Parse(newText);
+    }
+
+    float readToSpaceFloat(string text)
+    {
+        string newText = "";
+        bool spaceEncountered = false;
+        for (int i = 0; i < text.Length; i++)
+        {
+            char dat = text[i];
+
+            if (spaceEncountered)
+            {
+                newText += dat;
+            }
+            if (dat == ' ')
+            {
+                spaceEncountered = true;
+            }
+        }
+        return float.Parse(newText);
+    }
+
+    string readToSpaceString(string text)
+    {
+        string newText = "";
+        bool spaceEncountered = false;
+        for (int i = 0; i < text.Length; i++)
+        {
+            char dat = text[i];
+
+            if (spaceEncountered)
+            {
+                newText += dat;
+            }
+            if (dat == ' ')
+            {
+                spaceEncountered = true;
+            }
+        }
+        return newText;
     }
 
     //checks the line if it has # or [
@@ -123,6 +297,7 @@ public class HTRFileReader : EditorWindow
             }
             else
             {
+                done = true;
                 curMode = currentHTRMode.FRAMING;
             }
             return false;

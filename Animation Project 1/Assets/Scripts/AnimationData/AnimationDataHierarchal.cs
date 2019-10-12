@@ -6,13 +6,13 @@ using UnityEngine;
 [System.Serializable]
 public class AnimationDataHierarchal : AnimationData
 {
-    public int segmentNumber;
     //eulerRotationOrder
     //calibrationUnits: mm is .001, cm is .01, dm = .1, m = 1
+    float calibrationUnit;
     //RotationUnits
     //globalAxisofGravity
     //Bone lengthAxis: default y
-    public int scaleFactor;
+    public float scaleFactor;
 
     //poseData
     //basePose -> contains poseNode[] each poseNode has-> string name, parentPoseNode index, bone length,
@@ -21,14 +21,46 @@ public class AnimationDataHierarchal : AnimationData
     public void createBase(int count)
     {
         poseBase = new poseNode[count];
-        keyFrames = new List<KeyFrame>();
         for(int i = 0; i < count; i++)
         {
-            keyFrames.Add(new KeyFrame());
+            poseBase[i] = new poseNode();
+        }
+    }
+
+    public void generateFrames(int count)
+    {
+        for(int i = 0; i < poseBase.Length; i++)
+        {
+            poseBase[i].keyFrames = new List<KeyFrame>();
+            for(int j = 0; j < count; j++)
+            {
+                poseBase[i].keyFrames.Add(new KeyFrame(j));
+            }
+        }
+    }
+
+    public void setCalibrationUnit(string unit)
+    {
+        if (unit == "mm")
+        {
+            calibrationUnit = .001f;
+        }
+        else if (unit == "cm")
+        {
+            calibrationUnit = .01f;
+        }
+        else if (unit == "dm")
+        {
+            calibrationUnit = .1f;
+        }
+        else if (unit == "m")
+        {
+            calibrationUnit = 1f;
         }
     }
 }
 
+[System.Serializable]
 public class poseNode
 {
     public string name;
@@ -36,6 +68,8 @@ public class poseNode
     public float boneLength;
 
     public Vector3 basePosition;
-    public Vector3 keyRotation;
+    public Vector3 baseRotation;
     public float scale;
+
+    public List<KeyFrame> keyFrames; //list of keyframes for this object
 }

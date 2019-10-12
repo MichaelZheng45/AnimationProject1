@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+
+/*
 public class animationWindowEditor : EditorWindow
 {
 	//line variables
@@ -118,14 +120,6 @@ public class animationWindowEditor : EditorWindow
             }
         }
 
-        /*
-        GUILayout.Label("Base Settings", EditorStyles.boldLabel);
-        myString = EditorGUILayout.TextField("Text Field", myString);
-        groupEnabled = EditorGUILayout.BeginToggleGroup("Optional Settings", groupEnabled);
-        myBool = EditorGUILayout.Toggle("Toggle", myBool);
-        myFloat = EditorGUILayout.Slider("Slider", myFloat, -3, 3);
-        EditorGUILayout.EndToggleGroup();
-        */
     }
 
     //sort list
@@ -175,3 +169,5 @@ public class animationWindowEditor : EditorWindow
         Handles.EndGUI();
     }
 }
+
+*/

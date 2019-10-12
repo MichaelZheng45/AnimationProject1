@@ -5,11 +5,17 @@ using UnityEngine;
 
 public abstract class AnimationData : ScriptableObject
 {
-    public List<KeyFrame> keyFrames; //will be keyframePoses->single has one, hierarchy has multiple
     public int totalFrameDuration;
     public int keyFrameCount;
-    public int framePerSecond;
+    public float framePerSecond;
+
+    //set how many seconds before next frame
+    public virtual void setFramePerSecond(float count)
+    {
+        framePerSecond = 1.0f / count;
+    }
 }
+
 
 //functions
 //insert new keyframe in the order

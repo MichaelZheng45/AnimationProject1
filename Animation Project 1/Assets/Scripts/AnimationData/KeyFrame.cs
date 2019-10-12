@@ -20,4 +20,9 @@ public class KeyFrame
         atFrame = 0;
         keyPosition = newPosition;
     }
+
+    public KeyFrame(int frame)
+    {
+        atFrame = frame;
+    }
 }
