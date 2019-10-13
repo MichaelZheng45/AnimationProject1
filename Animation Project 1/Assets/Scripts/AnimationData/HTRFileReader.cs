@@ -28,9 +28,9 @@ public struct DataInput
 public class HTRFileReader : EditorWindow
 {
     AnimationDataHierarchal animData;
-    string path = "Assets/";
+    string path = "Assets/dbuckstein monster/res/monster_anim.htr"; //default
     currentHTRMode curMode;
-
+    GameObject jointObject;
     bool done = false;
 
     [MenuItem("Window/HTR Input")]
@@ -42,6 +42,7 @@ public class HTRFileReader : EditorWindow
     private void OnGUI()
     {
         curMode = currentHTRMode.HEADER;
+        jointObject = EditorGUILayout.ObjectField("AnimationObject", jointObject, typeof(GameObject), true) as GameObject;
         animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationDataHierarchal), true) as AnimationDataHierarchal;
         path = EditorGUILayout.TextField("AssestPath", path);
         if(GUILayout.Button("Process"))
@@ -115,9 +116,26 @@ public class HTRFileReader : EditorWindow
                 {
                     DataInput data = superParseDataIntoInputBase(textLine);
                     int index = jointIndexList.IndexOf(data.name);
-                    animData.poseBase[index].basePosition = data.transform;
-                    animData.poseBase[index].baseRotation = data.rotation;
+                    animData.poseBase[index].basePosition = data.transform * animData.calibrationUnit;
+                    animData.poseBase[index].baseRotation = data.rotation * animData.calibrationUnit;
                     animData.poseBase[index].boneLength = data.boneLength;
+
+                    Matrix4x4 localMat = new Matrix4x4(data.transform,data.rotation,new Vector4(1,1,1,1), Vector4.zero);
+                    animData.poseBase[index].localTransform = localMat;
+
+                    int parentIndex = animData.poseBase[index].parentNodeIndex;
+                    if(parentIndex == -1)
+                    {
+                        //is root
+                        animData.poseBase[index].globalTransform = localMat;
+                    }
+                    else
+                    {
+                        animData.poseBase[index].globalTransform = (animData.poseBase[parentIndex].globalTransform * localMat);
+                    }
+
+                    GameObject newJoint = Instantiate(jointObject, animData.poseBase[index].globalTransform.GetRow(0), Quaternion.Euler(animData.poseBase[index].globalTransform.GetRow(1)));
+                    newJoint.name = data.name;
                 }
                 else if(curMode == currentHTRMode.FRAMING)
                 {
@@ -358,6 +376,7 @@ public class HTRFileReader : EditorWindow
             }
             else
             {
+                done = true;
                 //read in [joingName] for processing
                 joint = "";
                 curMode = currentHTRMode.FRAMING;

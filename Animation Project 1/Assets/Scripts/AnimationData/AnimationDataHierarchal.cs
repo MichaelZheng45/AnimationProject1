@@ -8,7 +8,7 @@ public class AnimationDataHierarchal : AnimationData
 {
     //eulerRotationOrder
     //calibrationUnits: mm is .001, cm is .01, dm = .1, m = 1
-    float calibrationUnit;
+    public float calibrationUnit;
     //RotationUnits
     //globalAxisofGravity
     //Bone lengthAxis: default y
@@ -74,6 +74,8 @@ public class poseNode
     public Vector3 basePosition;
     public Vector3 baseRotation;
     public float scale;
+    public Matrix4x4 localTransform;
+    public Matrix4x4 globalTransform;
 
     public List<KeyFrame> keyFrames; //list of keyframes for this object
 }
