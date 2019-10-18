@@ -101,6 +101,7 @@ public class HTRFileReader : EditorWindow
                     animData.poseBase[jointCount].name = first;
                     jointIndexList.Add(first);
 
+                    //generate parent index using the jointIndexList
                     if(second != "GLOBAL")
                     {
                         animData.poseBase[jointCount].parentNodeIndex = jointIndexList.IndexOf(second);
@@ -114,15 +115,18 @@ public class HTRFileReader : EditorWindow
                 }
                 else if(curMode == currentHTRMode.BASE_POSITION)
                 {
+                    //create base pose
                     DataInput data = superParseDataIntoInputBase(textLine);
                     int index = jointIndexList.IndexOf(data.name);
-                    animData.poseBase[index].basePosition = data.transform * animData.calibrationUnit;
-                    animData.poseBase[index].baseRotation = data.rotation * animData.calibrationUnit;
+                    animData.poseBase[index].basePosition = data.transform;
+                    animData.poseBase[index].baseRotation = data.rotation;
                     animData.poseBase[index].boneLength = data.boneLength;
 
-                    Matrix4x4 localMat = new Matrix4x4(data.transform,data.rotation,new Vector4(1,1,1,1), Vector4.zero);
-                    animData.poseBase[index].localTransform = localMat;
+                    //generate local matrix using pared data
+                    Matrix4x4 localMat = Matrix4x4.TRS(data.transform, Quaternion.Euler(data.rotation), new Vector4(1,1,1,1));
+                    animData.poseBase[index].globalTransform = localMat;
 
+                    //do forward kinematics
                     int parentIndex = animData.poseBase[index].parentNodeIndex;
                     if(parentIndex == -1)
                     {
@@ -131,14 +135,18 @@ public class HTRFileReader : EditorWindow
                     }
                     else
                     {
+                        //create global transform by taking the parent's transform and multiply with the local matrix
                         animData.poseBase[index].globalTransform = (animData.poseBase[parentIndex].globalTransform * localMat);
+
                     }
 
-                    GameObject newJoint = Instantiate(jointObject, animData.poseBase[index].globalTransform.GetRow(0), Quaternion.Euler(animData.poseBase[index].globalTransform.GetRow(1)));
+                    //generate joint in scene (test) https://answers.unity.com/questions/402280/how-to-decompose-a-trs-matrix.html
+                    GameObject newJoint = Instantiate(jointObject, animData.poseBase[index].globalTransform.GetColumn(3), Quaternion.Euler((animData.poseBase[index].globalTransform.GetRow(1))));
                     newJoint.name = data.name;
                 }
                 else if(curMode == currentHTRMode.FRAMING)
                 {
+                    //get the keyframe and set it in
                     DataInput data = superParseDataIntoInputKeyFrame(textLine);
                     int index = jointIndexList.IndexOf(currentJoint);
                     Debug.Log(currentJoint);

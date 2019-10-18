@@ -47,7 +47,7 @@ public class AnimationDataHierarchal : AnimationData
     {
         if (unit == "mm")
         {
-            calibrationUnit = .001f;
+            calibrationUnit = 1f;
         }
         else if (unit == "cm")
         {
