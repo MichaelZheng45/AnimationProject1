@@ -71,11 +71,46 @@ public class poseNode
     public int parentNodeIndex;
     public float boneLength;
 
-    public Vector3 basePosition;
-    public Vector3 baseRotation;
-    public float scale;
-    public Matrix4x4 localTransform;
-    public Matrix4x4 globalTransform;
+    public Matrix4x4 localBaseTransform;
+    public Matrix4x4 globalBaseTransform;
+
+    public Matrix4x4 currentTransform;
+
+    public GameObject jointObject;
 
     public List<KeyFrame> keyFrames; //list of keyframes for this object
+
+    public Vector3 getLocalPosition()
+    {
+        return localBaseTransform.GetColumn(3);
+    }
+
+    public Vector3 getLocalRotationEuler()
+    {
+        Quaternion rotation = Quaternion.LookRotation(localBaseTransform.GetColumn(2), localBaseTransform.GetColumn(1));
+        return rotation.eulerAngles;
+    }
+
+    public Vector3 getCurrentPosition()
+    {
+        return currentTransform.GetColumn(3);
+    }
+
+    public Vector3 getCurrentRotationEuler()
+    {
+        Quaternion rotation = Quaternion.LookRotation(currentTransform.GetColumn(2), currentTransform.GetColumn(1));
+        return rotation.eulerAngles;
+    }
+
+    public Quaternion getCurrentRotationQ()
+    {
+        Quaternion rotation = Quaternion.LookRotation(currentTransform.GetColumn(2), currentTransform.GetColumn(1));
+        return rotation;
+    }
+
+    public void updateNewPosition()
+    {
+        jointObject.transform.position = getCurrentPosition();
+        jointObject.transform.rotation = getCurrentRotationQ();
+    }
 }

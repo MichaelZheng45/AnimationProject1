@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-/*
+
 public class animationWindowEditor : EditorWindow
 {
 	//line variables
@@ -11,7 +11,7 @@ public class animationWindowEditor : EditorWindow
 	int lineMaxPosY =300;
 	int lineMaxPosX = 400;
     int xShift = 50;
-    public AnimationData animData;
+    public AnimationDataSingle animData;
     public GameObject animObject;
 	int currentKeyframe;
 
@@ -32,7 +32,7 @@ public class animationWindowEditor : EditorWindow
         Rect rectangle = new Rect(new Vector2(xShift, lineBasePosY), new Vector2(lineMaxPosX, lineMaxPosY-lineBasePosY));
 		EditorGUI.DrawRect(rectangle, Color.gray);
 
-        animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationData), true) as AnimationData;
+        animData = EditorGUILayout.ObjectField("AnimationDataSingle", animData, typeof(AnimationDataSingle), true) as AnimationDataSingle;
         animObject = EditorGUILayout.ObjectField("AnimationObject", animObject, typeof(GameObject), true) as GameObject;
 
         if (animData != null && animObject != null)
@@ -170,4 +170,3 @@ public class animationWindowEditor : EditorWindow
     }
 }
 
-*/
