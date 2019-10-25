@@ -12,6 +12,18 @@ public class testBlendScale : TestBlend
     // Update is called once per frame
     void Update()
     {
-        //Logic:same as lerp operation as if pose_0 is pose_identity
+        identity nIdentity = new identity();
+
+        //translation: literal linear interpolation
+        poseresult.localPosition = Vector3.Lerp(nIdentity.position, pose_1.localPosition, parameter);
+
+        //scale: ditto
+        poseresult.localScale = Vector3.Lerp(nIdentity.scale, pose_1.localScale, parameter);
+        //rotation: slerp if quaternion (or NLERP) otherwise euler lerp
+        if (usingQuaternion)
+            poseresult.localRotation = Quaternion.Slerp(nIdentity.rotation, pose_1.localRotation, parameter);
+        else
+            poseresult.localEulerAngles = Vector3.Lerp(nIdentity.rotation.eulerAngles, pose_1.localEulerAngles, parameter);
+
     }
 }

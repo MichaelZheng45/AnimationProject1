@@ -12,5 +12,17 @@ public class TestBlend : MonoBehaviour
     {
         poseresult = this.gameObject.transform;
     }
+}
 
+public class identity
+{
+    public Vector3 position;
+    public Quaternion rotation;
+    public Vector3 scale;
+    public identity()
+    {
+        position = Vector3.zero;
+        scale = Vector3.zero;
+        rotation = Quaternion.identity;
+    }
 }
