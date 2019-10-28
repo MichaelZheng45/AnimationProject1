@@ -2,27 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum testBlendMode
+{
+    LERP,
+    ADD,
+    SCALE,
+    AVERAGE
+}
 public class TestBlend : MonoBehaviour
 {
-    protected Transform poseresult;
-    public bool usingQuaternion = true;
 
+    public bool usingQuaternion = true;
+    public testBlendMode blendMode;
+
+    [Range(0, 1)]
+    public float parameter0, parameter1;
+    public Transform pose0, pose1;
+    transformData dataPose0, dataPose1;
+    transformData poseresult;
     // Start is called before the first frame update
     void Start()
     {
-        poseresult = this.gameObject.transform;
+        dataPose0 = new transformData();
+        dataPose1 = new transformData();
+        dataPose0.setTransform(pose0);
+        dataPose1.setTransform(pose1);
+    }
+
+    private void Update()
+    {
+      switch(blendMode)
+        {
+            case testBlendMode.LERP:
+                poseresult = blendStatic.lerp(dataPose0, dataPose1, parameter0, usingQuaternion);
+                break;
+            case testBlendMode.ADD:
+                poseresult = blendStatic.add(dataPose0, dataPose1, usingQuaternion);
+                break;
+            case testBlendMode.SCALE:
+                poseresult = blendStatic.scale(new identity(), dataPose0, parameter0, usingQuaternion);
+                break;
+            case testBlendMode.AVERAGE:
+                poseresult = blendStatic.average(new identity(), dataPose0, dataPose1, parameter0, parameter1, usingQuaternion);
+                break;
+        }
+        poseresult.changeTransform(this.transform);
     }
 }
 
-public class identity
-{
-    public Vector3 position;
-    public Quaternion rotation;
-    public Vector3 scale;
-    public identity()
-    {
-        position = Vector3.zero;
-        scale = Vector3.zero;
-        rotation = Quaternion.identity;
-    }
-}
+
