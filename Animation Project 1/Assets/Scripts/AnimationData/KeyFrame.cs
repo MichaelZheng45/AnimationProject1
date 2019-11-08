@@ -7,7 +7,7 @@ public class KeyFrame
 {
     public Vector3 keyPosition;
     public Vector3 keyRotation;
-    public float scale;
+    public Vector3 scale;
 	public int atFrame;
 
     public KeyFrame()

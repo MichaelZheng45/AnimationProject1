@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
+using UnityEngine;
 
 public enum currentHTRMode
 {
@@ -86,7 +85,7 @@ public class HTRFileReader : EditorWindow
         int jointCount = 0; //keep track of the where the index it is putting in the basepose
         List<string> jointIndexList = new List<string>(); //keeps track of the string names for easier hierarchy building/checking
         string currentJoint = ""; //for keyframing
-
+        gameObjectMain mainObjStructure = null;
         while (!done)
         {
             string textLine = "";
@@ -136,19 +135,23 @@ public class HTRFileReader : EditorWindow
                         //generate joint in scene (test) https://answers.unity.com/questions/402280/how-to-decompose-a-trs-matrix.html
                         GameObject newJoint = Instantiate(jointObject, animData.poseBase[index].globalBaseTransform.GetColumn(3), Quaternion.Euler((animData.poseBase[index].globalBaseTransform.GetRow(1))));
                         newJoint.name = data.name;
-                        animData.poseBase[index].jointObject = newJoint;
+                  
+                        newJoint.AddComponent<gameObjectMain>();
+                        mainObjStructure = newJoint.GetComponent<gameObjectMain>();
+                        mainObjStructure.newList();
+                        mainObjStructure.animData = animData;
+                        mainObjStructure.addObject(newJoint);
                     }
                     else
                     {
-
                         //create global transform by taking the parent's transform and multiply with the local matrix
                         animData.poseBase[index].globalBaseTransform = (animData.poseBase[parentIndex].globalBaseTransform * localMat);
-                        parentObj = animData.poseBase[parentIndex].jointObject;
+                        parentObj = mainObjStructure.getObject(parentIndex);
 
                         //generate joint in scene (test) https://answers.unity.com/questions/402280/how-to-decompose-a-trs-matrix.html
                         GameObject newJoint = Instantiate(jointObject, animData.poseBase[index].globalBaseTransform.GetColumn(3), Quaternion.Euler((animData.poseBase[index].globalBaseTransform.GetRow(1))), parentObj.transform);
                         newJoint.name = data.name;
-                        animData.poseBase[index].jointObject = newJoint;
+                        mainObjStructure.addObject(newJoint);
                     }
 
                     animData.poseBase[index].currentTransform = animData.poseBase[index].globalBaseTransform;
@@ -162,7 +165,7 @@ public class HTRFileReader : EditorWindow
                     animData.poseBase[index].keyFrames[data.frame].atFrame = data.frame;
                     animData.poseBase[index].keyFrames[data.frame].keyPosition = data.transform;
                     animData.poseBase[index].keyFrames[data.frame].keyRotation = data.rotation;
-                    animData.poseBase[index].keyFrames[data.frame].scale = data.scaleFactor;
+                    animData.poseBase[index].keyFrames[data.frame].scale = new Vector3(data.scaleFactor, data.scaleFactor, data.scaleFactor);
                 }
             }
         }

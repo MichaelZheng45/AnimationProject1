@@ -21,6 +21,13 @@ public struct transformData
     public Quaternion localRotation;
     public Vector3 localScale;
 
+    public transformData(Vector3 position, Quaternion rotation, Vector3 scale)
+    {
+        localPosition = position;
+        localRotation = rotation;
+        localScale = scale;
+    }
+
     public Vector3 localEulerAngles()
     {
         return localRotation.eulerAngles;
