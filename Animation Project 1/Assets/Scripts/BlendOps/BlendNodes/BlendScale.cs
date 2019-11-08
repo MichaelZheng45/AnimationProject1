@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BlendScale : BlendNode
 {
-
-    public override void blendOperation()
+    float parameter;
+    public override blendPoseData blendOperation()
     {
-        base.blendOperation();
+        return new blendPoseData();
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BlendAvg : BlendNode
 {
-    public override void blendOperation()
+    public override blendPoseData blendOperation()
     {
-        base.blendOperation();
+        return new blendPoseData();
     }
 }
