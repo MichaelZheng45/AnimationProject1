@@ -6,8 +6,9 @@ public class BlendingTree : ScriptableObject
 {
     BlendNode rootNode;
 
-    public blendTransformData useBlendTree()
+    public blendPoseData useBlendTree(int keyFrameIndex)
     {
-        return new blendTransformData();
+
+        return rootNode.blendOperation(keyFrameIndex);
     }
 }
