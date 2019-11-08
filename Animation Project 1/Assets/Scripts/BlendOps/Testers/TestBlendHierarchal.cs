@@ -16,9 +16,9 @@ public class TestBlendHierarchal : MonoBehaviour
     {
         for(int i = 0; i < animData.poseBase.Length; i++)
         {
-            transformData poseresult = new transformData();
-            transformData dataPose0 = new transformData();
-            transformData dataPose1 = new transformData();
+            blendTransformData poseresult = new blendTransformData();
+            blendTransformData dataPose0 = new blendTransformData();
+            blendTransformData dataPose1 = new blendTransformData();
             KeyFrame key0 = animData.poseBase[i].keyFrames[keyframe0];
             KeyFrame key1 = animData.poseBase[i].keyFrames[keyframe1];
             dataPose0.setTransformIndividual(key0.keyPosition, Quaternion.Euler(key0.keyRotation), new Vector3(1, 1, 1));

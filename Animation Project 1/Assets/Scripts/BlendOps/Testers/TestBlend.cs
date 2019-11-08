@@ -18,13 +18,13 @@ public class TestBlend : MonoBehaviour
     [Range(0, 1)]
     public float parameter0, parameter1;
     public Transform pose0, pose1;
-    transformData dataPose0, dataPose1;
-    transformData poseresult;
+    blendTransformData dataPose0, dataPose1;
+    blendTransformData poseresult;
     // Start is called before the first frame update
     void Start()
     {
-        dataPose0 = new transformData();
-        dataPose1 = new transformData();
+        dataPose0 = new blendTransformData();
+        dataPose1 = new blendTransformData();
         dataPose0.setTransform(pose0);
         dataPose1.setTransform(pose1);
     }
