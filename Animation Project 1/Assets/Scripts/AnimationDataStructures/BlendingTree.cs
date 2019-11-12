@@ -6,8 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class BlendingTree : ScriptableObject
 {
-    [SerializeField]
-    BlendNode rootNode;
+    public BlendNode rootNode;
 
     public BlendingTree()
     {

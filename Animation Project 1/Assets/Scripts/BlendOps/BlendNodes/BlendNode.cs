@@ -15,13 +15,10 @@ public enum blendType
 [System.Serializable]
 public class BlendNode
 {
-    [SerializeField]
     public BlendNode nodePrev;
 
-    [SerializeField]
     public BlendNode nodeOne;
 
-    [SerializeField]
     public BlendNode nodeTwo;
 
     public blendType nodeType;
