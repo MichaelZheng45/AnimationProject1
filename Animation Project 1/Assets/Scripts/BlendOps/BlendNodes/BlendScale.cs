@@ -5,6 +5,12 @@ using UnityEngine;
 public class BlendScale : BlendNode
 {
     public float parameter;
+    public override void setType()
+    {
+        nodeType = blendType.BLEND_SCALE;
+    }
+
+
     public override blendPoseData blendOperation(int currentFrameID)
     {
         blendPoseData firstPose = nodeOne.blendOperation(currentFrameID);

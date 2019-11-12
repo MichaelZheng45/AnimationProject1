@@ -5,6 +5,13 @@ using UnityEngine;
 public class BlendLerp : BlendNode
 {
     public float parameter;
+
+    public override void setType()
+    {
+        nodeType = blendType.BLEND_LERP;
+    }
+
+
     public override blendPoseData blendOperation(int currentFrameID)
     {
         blendPoseData firstPose = nodeOne.blendOperation(currentFrameID);

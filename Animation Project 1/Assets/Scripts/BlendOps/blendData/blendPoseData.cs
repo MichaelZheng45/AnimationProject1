@@ -39,4 +39,9 @@ public struct blendPoseData
             poseData[i] = newdata;
         }
     }
+
+    public blendTransformData getData(int index)
+    {
+        return poseData[index];
+    }
 }

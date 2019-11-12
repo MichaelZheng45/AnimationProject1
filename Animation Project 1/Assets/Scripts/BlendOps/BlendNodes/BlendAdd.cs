@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class BlendAdd : BlendNode
 {
+    public override void setType()
+    {
+        nodeType = blendType.BLEND_ADD;
+    }
+
     public override blendPoseData blendOperation(int currentFrameID)
     {
         blendPoseData firstPose = nodeOne.blendOperation(currentFrameID);

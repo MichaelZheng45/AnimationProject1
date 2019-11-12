@@ -63,7 +63,7 @@ public class AnimationPlayerHierarchal : MonoBehaviour
                     animData.poseBase[i].currentTransform = animData.poseBase[parentIndex].currentTransform * deltaMatrix;
                 }
 
-                animData.poseBase[i].updateNewPosition();
+             //   animData.poseBase[i].updateNewPosition();
             }
         }
     }

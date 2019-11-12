@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class BlendAvg : BlendNode
 {
-    float parameter1, parameter2;
+    public float parameter1, parameter2;
+
+    public override void setType()
+    {
+        nodeType = blendType.BLEND_AVG;
+    }
+
 
     public override blendPoseData blendOperation(int currentFrameID)
     {

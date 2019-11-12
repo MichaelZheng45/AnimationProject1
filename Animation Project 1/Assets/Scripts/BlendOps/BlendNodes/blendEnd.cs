@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class blendEnd : BlendNode
 {
-    AnimationClip clip;
+    public AnimationClip clip;
+    public override void setType()
+    {
+        nodeType = blendType.BLEND_END;
+    }
 
     public override blendPoseData blendOperation(int currentFrameID)
     {

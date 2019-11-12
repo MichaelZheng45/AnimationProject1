@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "AnimaitonClip", menuName = "ScriptableObjects/AnimationClip", order = 4)]
+[System.Serializable]
 public class AnimationClip : ScriptableObject
 {
     public AnimationDataHierarchal animData;

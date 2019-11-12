@@ -76,8 +76,6 @@ public class poseNode
 
     public Matrix4x4 currentTransform;
 
-    public GameObject jointObject;
-
     public List<KeyFrame> keyFrames; //list of keyframes for this object
 
     public Vector3 getLocalPosition()
@@ -108,9 +106,9 @@ public class poseNode
         return rotation;
     }
 
-    public void updateNewPosition()
+    public void updateNewPosition(GameObject joint)
     {
-        jointObject.transform.position = getCurrentPosition();
-        jointObject.transform.rotation = getCurrentRotationQ();
+        joint.transform.position = getCurrentPosition();
+        joint.transform.rotation = getCurrentRotationQ();
     }
 }
