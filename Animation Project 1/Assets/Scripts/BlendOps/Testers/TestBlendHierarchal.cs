@@ -12,6 +12,8 @@ public class TestBlendHierarchal : MonoBehaviour
     public float parameter0, parameter1;
     public int keyframe0, keyframe1;
 
+    public gameObjectMain gameObjectData;
+
     private void Update()
     {
         for(int i = 0; i < animData.poseBase.Length; i++)
@@ -57,8 +59,8 @@ public class TestBlendHierarchal : MonoBehaviour
                 animData.poseBase[i].currentTransform = animData.poseBase[parentIndex].currentTransform * deltaMatrix;
             }
 
-            //animData.poseBase[i].updateNewPosition();
-
+            animData.poseBase[i].updateNewPosition(gameObjectData.getObject(i));
+        
         }
 
 

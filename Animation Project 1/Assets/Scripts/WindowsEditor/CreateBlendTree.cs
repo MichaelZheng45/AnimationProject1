@@ -37,7 +37,7 @@ public class CreateBlendTree : EditorWindow
         {
             if(currentTree.getRoot() == null)
             {
-                currentTree.SetRoot(new BlendNode());
+                currentTree.SetRoot(new BlendNode(blendType.BLEND_INVALID));
                 currentNodeType = blendType.BLEND_INVALID;
             }
             else
@@ -67,28 +67,8 @@ public class CreateBlendTree : EditorWindow
 
     BlendNode changeNewNode(blendType newType)
     {
-        BlendNode newNode = new BlendNode();
+        BlendNode newNode = new BlendNode(newType);
 
-        switch (newType)
-        {
-            case blendType.BLEND_LERP:
-                newNode = new BlendLerp();
-                break;
-            case blendType.BLEND_ADD:
-                newNode = new BlendAdd();
-                break;
-            case blendType.BLEND_SCALE:
-                newNode = new BlendScale();
-                break;
-            case blendType.BLEND_AVG:
-                newNode = new BlendAvg();
-                break;
-            case blendType.BLEND_END:
-                newNode = new blendEnd();
-                break;
-            default:
-                return null;
-        }
         changeType = false;
         return newNode;
     }
@@ -153,23 +133,23 @@ public class CreateBlendTree : EditorWindow
             GUILayout.Label("Generate new Node", EditorStyles.miniLabel);
             if (GUILayout.Button("New Lerp"))
             {
-                newNode = new BlendLerp();
+                newNode = new BlendNode(blendType.BLEND_LERP);
             }
             if (GUILayout.Button("New Scale"))
             {
-                newNode = new BlendScale();
+                newNode = new BlendNode(blendType.BLEND_SCALE);
             }
             if (GUILayout.Button("New Average"))
             {
-                newNode = new BlendAvg();
+                newNode = new BlendNode(blendType.BLEND_AVG);
             }
             if (GUILayout.Button("New Add"))
             {
-                newNode = new BlendAdd();
+                newNode = new BlendNode(blendType.BLEND_ADD);
             }
             if (GUILayout.Button("New End"))
             {
-                newNode = new blendEnd();
+                newNode = new BlendNode(blendType.BLEND_END);
             }
 
             if(newNode != null)
@@ -201,37 +181,37 @@ public class CreateBlendTree : EditorWindow
                     GUILayout.Label("This Node is invalid, please change to a valid type", EditorStyles.miniLabel);
                     break;
                 case blendType.BLEND_LERP:
-                    BlendLerp lerpNode = (BlendLerp)currentTree.getIndexedNode(currentNode);
-                    lerpNode.parameter = EditorGUILayout.Slider("Lerp Parameter", lerpNode.parameter, 0, 1);
-                    lerpNode = (BlendLerp)checkBranchOne(lerpNode);
+                    BlendNode lerpNode = currentTree.getIndexedNode(currentNode);
+                    lerpNode.parameter1 = EditorGUILayout.Slider("Lerp Parameter", lerpNode.parameter1, 0, 1);
+                    lerpNode = checkBranchOne(lerpNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
-                    lerpNode = (BlendLerp)checkBranchTwo(lerpNode);
+                    lerpNode = checkBranchTwo(lerpNode);
 
                     break;
                 case blendType.BLEND_ADD:
-                    BlendAdd addNode = (BlendAdd)currentTree.getIndexedNode(currentNode);
-                    addNode = (BlendAdd)checkBranchOne(addNode);
+                    BlendNode addNode = currentTree.getIndexedNode(currentNode);
+                    addNode = checkBranchOne(addNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
-                    addNode = (BlendAdd)checkBranchTwo(addNode);
+                    addNode = checkBranchTwo(addNode);
 
                     break;
                 case blendType.BLEND_SCALE:
-                    BlendScale scaleNode = (BlendScale)currentTree.getIndexedNode(currentNode);
-                    scaleNode.parameter = EditorGUILayout.Slider("Scale Parameter", scaleNode.parameter, 0, 1);
-                    scaleNode = (BlendScale)checkBranchOne(scaleNode);
+                    BlendNode scaleNode = currentTree.getIndexedNode(currentNode);
+                    scaleNode.parameter1 = EditorGUILayout.Slider("Scale Parameter", scaleNode.parameter1, 0, 1);
+                    scaleNode = checkBranchOne(scaleNode);
 
                     break;
                 case blendType.BLEND_AVG:
-                    BlendAvg avgNode = (BlendAvg)currentTree.getIndexedNode(currentNode);
+                    BlendNode avgNode = currentTree.getIndexedNode(currentNode);
                     avgNode.parameter1 = EditorGUILayout.Slider("Average Parameter One", avgNode.parameter1, 0, 1);
-                    avgNode = (BlendAvg)checkBranchOne(avgNode);
+                    avgNode = checkBranchOne(avgNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
                     avgNode.parameter2 = EditorGUILayout.Slider("Average Parameter Two", avgNode.parameter2, 0, 1);
-                    avgNode = (BlendAvg)checkBranchTwo(avgNode);
+                    avgNode = checkBranchTwo(avgNode);
 
                     break;
                 case blendType.BLEND_END:
-                    blendEnd endNode = (blendEnd)currentTree.getIndexedNode(currentNode);
+                    BlendNode endNode = currentTree.getIndexedNode(currentNode);
                     endNode.clip = EditorGUILayout.ObjectField("AnimationClip", endNode.clip, typeof(AnimationClip), true) as AnimationClip;
 
                     break;
@@ -256,28 +236,28 @@ public class CreateBlendTree : EditorWindow
         if (atNode == null)
         {
             GUILayout.Label("Generate new Node", EditorStyles.miniLabel);
-            if(GUILayout.Button("New Lerp"))
+            if (GUILayout.Button("New Lerp"))
             {
-                newNode = new BlendLerp();
+                newNode = new BlendNode(blendType.BLEND_LERP);
             }
             if (GUILayout.Button("New Scale"))
             {
-                newNode = new BlendScale();
+                newNode = new BlendNode(blendType.BLEND_SCALE);
             }
             if (GUILayout.Button("New Average"))
             {
-                newNode = new BlendAvg();
+                newNode = new BlendNode(blendType.BLEND_AVG);
             }
             if (GUILayout.Button("New Add"))
             {
-                newNode = new BlendAdd();
+                newNode = new BlendNode(blendType.BLEND_ADD);
             }
             if (GUILayout.Button("New End"))
             {
-                newNode = new blendEnd();
+                newNode = new BlendNode(blendType.BLEND_END);
             }
 
-            if(newNode != null)
+            if (newNode != null)
             {
                 newNode.prevIndex = node.currentIndex;
                 int currentIndex = currentTree.addNewNode(newNode);
@@ -308,23 +288,23 @@ public class CreateBlendTree : EditorWindow
             GUILayout.Label("Generate new Node", EditorStyles.miniLabel);
             if (GUILayout.Button("New Lerp"))
             {
-                newNode = new BlendLerp();
+                newNode = new BlendNode(blendType.BLEND_LERP);
             }
             if (GUILayout.Button("New Scale"))
             {
-                newNode = new BlendScale();
+                newNode = new BlendNode(blendType.BLEND_SCALE);
             }
             if (GUILayout.Button("New Average"))
             {
-                newNode = new BlendAvg();
+                newNode = new BlendNode(blendType.BLEND_AVG);
             }
             if (GUILayout.Button("New Add"))
             {
-                newNode = new BlendAdd();
+                newNode = new BlendNode(blendType.BLEND_ADD);
             }
             if (GUILayout.Button("New End"))
             {
-                newNode = new blendEnd();
+                newNode = new BlendNode(blendType.BLEND_END);
             }
 
             if (newNode != null)

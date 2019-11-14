@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19cfdf008a81dc49bd612f2bb6fdadc, type: 3}
   m_Name: Clip2
   m_EditorClassIdentifier: 
-  animData: {fileID: 0}
-  startFrame: 0
-  endFrame: 0
+  animData: {fileID: 11400000, guid: b1c0026ddf06ebb479fc01eabc1d099e, type: 2}
+  startFrame: 60
+  endFrame: 80

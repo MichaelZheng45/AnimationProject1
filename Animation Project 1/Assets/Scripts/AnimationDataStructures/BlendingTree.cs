@@ -11,7 +11,7 @@ public class BlendingTree : ScriptableObject
     public BlendingTree()
     {
         NodeTree = new List<BlendNode>();
-        NodeTree.Add(new BlendNode());
+        NodeTree.Add(new BlendNode(blendType.BLEND_INVALID));
         NodeTree[0].prevIndex = -1;
         NodeTree[0].currentIndex = 0;
     }

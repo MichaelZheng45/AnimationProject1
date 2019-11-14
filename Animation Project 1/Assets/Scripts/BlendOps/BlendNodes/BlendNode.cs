@@ -21,12 +21,15 @@ public class BlendNode
     public int nextID2;
 
     public blendType nodeType;
+    public float parameter1;
+    public float parameter2;
+    public AnimationClip clip;
 
-    public BlendNode()
+    public BlendNode(blendType newtype)
     {
         nextID1 = -1;
         nextID2 = -1;
-        setType();
+        nodeType = newtype;
     }
 
     public void replaceConnections(BlendNode node)
@@ -44,6 +47,77 @@ public class BlendNode
 
     public virtual blendPoseData blendOperation(BlendingTree parentTree, int currentFrameID)
     {
-        return new blendPoseData();
+        blendPoseData firstPose = new blendPoseData();
+        blendPoseData secondPose = new blendPoseData();
+        int length=0;
+        switch (nodeType)
+        {
+            case blendType.BLEND_LERP:
+                firstPose = parentTree.getIndexedNode(nextID1).blendOperation(parentTree, currentFrameID);
+                secondPose= parentTree.getIndexedNode(nextID2).blendOperation(parentTree, currentFrameID);
+
+                 length = firstPose.size;
+
+                for (int i = 0; i < length; i++)
+                {
+                    blendTransformData transformData;
+
+                    transformData = blendStatic.lerp(firstPose.getPoseData(i), secondPose.getPoseData(i), parameter1, true);
+                    firstPose.setPoseData(transformData, i);
+                }
+                return firstPose;
+
+            case blendType.BLEND_ADD:
+                firstPose = parentTree.getIndexedNode(nextID1).blendOperation(parentTree, currentFrameID);
+                secondPose = parentTree.getIndexedNode(nextID2).blendOperation(parentTree, currentFrameID);
+
+                length = firstPose.size;
+
+                for (int i = 0; i < length; i++)
+                {
+                    blendTransformData transformData;
+
+                    transformData = blendStatic.add(firstPose.getPoseData(i), secondPose.getPoseData(i), true);
+                    firstPose.setPoseData(transformData, i);
+                }
+                return firstPose;
+
+            case blendType.BLEND_SCALE:
+                firstPose = parentTree.getIndexedNode(nextID1).blendOperation(parentTree, currentFrameID);
+
+                length = firstPose.size;
+
+                for (int i = 0; i < length; i++)
+                {
+                    blendTransformData transformData = firstPose.getPoseData(i);
+                    identity newIdentity = new identity();
+                    transformData = blendStatic.scale(newIdentity, transformData, parameter1, true);
+                    firstPose.setPoseData(transformData, i);
+                }
+                return firstPose;
+                
+            case blendType.BLEND_AVG:
+                firstPose = parentTree.getIndexedNode(nextID1).blendOperation(parentTree, currentFrameID);
+                secondPose = parentTree.getIndexedNode(nextID2).blendOperation(parentTree, currentFrameID);
+                length = firstPose.size;
+
+                for (int i = 0; i < length; i++)
+                {
+                    blendTransformData transformData;
+                    identity nIdentity = new identity();
+
+                    transformData = blendStatic.average(nIdentity, firstPose.getPoseData(i), secondPose.getPoseData(i), parameter1, parameter2, true);
+                    firstPose.setPoseData(transformData, i);
+                }
+                return firstPose;
+
+            case blendType.BLEND_END:
+                blendPoseData newPoseData = new blendPoseData();
+                newPoseData.setData(clip, currentFrameID);
+                return newPoseData;
+              
+            default:
+                return firstPose;
+        }
     }
 }
