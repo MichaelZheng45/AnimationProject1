@@ -10,7 +10,7 @@ public class CreateBlendTree : EditorWindow
     BlendingTree currentTree;
 
     blendType currentNodeType;
-    BlendNode currentNode;
+    int currentNode = -1;
 
     bool changeType = false;
 
@@ -42,9 +42,9 @@ public class CreateBlendTree : EditorWindow
             }
             else
             {
-                if(currentNode == null)
+                if(currentNode == -1)
                 {
-                    currentNode = currentTree.getRoot();
+                    currentNode = currentTree.getRoot().currentIndex;
                 }
                 //if root is an invalid node-> create a new node
                 if (currentTree.getRoot().nodeType == blendType.BLEND_INVALID)
@@ -53,7 +53,7 @@ public class CreateBlendTree : EditorWindow
                     if (currentNodeType != blendType.BLEND_INVALID && currentNodeType != currentTree.getRoot().nodeType)
                     {
                         currentTree.SetRoot(changeNewNode(currentNodeType));
-                        currentNode = currentTree.getRoot();
+                        currentNode = currentTree.getRoot().currentIndex;
                     }
                 }
                 else
@@ -96,47 +96,54 @@ public class CreateBlendTree : EditorWindow
     void nodeWorkings()
     {
         //navigate back to the root of tree
-        if (currentNode != currentTree.getRoot() && GUILayout.Button("Go to root"))
+        if (currentNode != 0 && GUILayout.Button("Go to root"))
         {
-            currentNode = currentTree.getRoot();
-            currentNodeType = currentNode.nodeType;
+            currentNode = 0;
+            currentNodeType = currentTree.getRoot().nodeType;
         }
 
+        GUILayout.Label("CurrentIndex: " + currentNode, EditorStyles.boldLabel);
+
         //navigate to connections
-        if(currentNode != currentTree.getRoot())
+        if (currentNode != 0)
         {
-            if (currentNode.nodePrev != null)
+            BlendNode prevNode = currentTree.getIndexedNode(currentTree.getIndexedNode(currentNode).prevIndex);
+            if (prevNode != null)
             {
                 if (GUILayout.Button("Previous Node"))
                 {
-                    currentNode = currentNode.nodePrev;
-                    currentNodeType = currentNode.nodeType;
+                    currentNode = prevNode.currentIndex;
+                    currentNodeType = prevNode.nodeType;
                 }
             }
         }
-        else
+        else if(currentNode == 0)
         {
             GUILayout.Label("IS ROOT", EditorStyles.boldLabel);
         }
 
-        if(currentNode.nodeOne != null)
+     
+        BlendNode nextNode1 = currentTree.getIndexedNode(currentTree.getIndexedNode(currentNode).nextID1);
+        if (nextNode1 != null)
         {
             if (GUILayout.Button("Next Node branch 1"))
             {
-                currentNode = currentNode.nodeOne;
-                currentNodeType = currentNode.nodeType;
-            }
-        }
-        if (currentNode.nodeTwo != null)
-        {
-            if (GUILayout.Button("Next Node branch 2"))
-            {
-                currentNode = currentNode.nodeTwo;
-                currentNodeType = currentNode.nodeType;
+                currentNode = nextNode1.currentIndex;
+                currentNodeType = nextNode1.nodeType;
             }
         }
 
-        GUILayout.Label("Current: " + currentNode.nodeType, EditorStyles.miniLabel);
+        BlendNode nextNode2 = currentTree.getIndexedNode(currentTree.getIndexedNode(currentNode).nextID2);
+        if (nextNode2 != null)
+        {
+            if (GUILayout.Button("Next Node branch 2"))
+            {
+                currentNode = nextNode2.currentIndex;
+                currentNodeType = nextNode1.nodeType;
+            }
+        }
+
+        GUILayout.Label("Current: " + currentTree.getIndexedNode(currentNode).nodeType, EditorStyles.miniLabel);
         changeType = EditorGUILayout.Toggle("change node type", changeType);
 
         if(changeType)
@@ -167,27 +174,16 @@ public class CreateBlendTree : EditorWindow
 
             if(newNode != null)
             {
-                if (currentTree.getRoot() == currentNode)
+                if (0 == currentNode)
                 {
                     currentTree.SetRoot(newNode);
-                    currentNode = currentTree.getRoot();
+                    currentNode = 0;
                 }
                 else
                 {
-                    BlendNode prevNode = currentNode.nodePrev;
-                    BlendNode oldNode = currentNode;
-
-                    currentNode = newNode;
-                    currentNode.nodePrev = prevNode;
-
-                    if(prevNode.nodeOne == oldNode)
-                    {
-                        prevNode.nodeOne = currentNode;
-                    }
-                    else
-                    {
-                        prevNode.nodeTwo = currentNode;
-                    }
+                    int index = currentNode;
+                
+                    currentTree.setIndexedNode(index, newNode);
                     
                 }
                 changeType = false;
@@ -199,54 +195,51 @@ public class CreateBlendTree : EditorWindow
         {
             GUILayout.Label("Node Data", EditorStyles.boldLabel);
             //do node
-            switch (currentNode.nodeType)
+            switch (currentTree.getIndexedNode(currentNode).nodeType)
             {
                 case blendType.BLEND_INVALID:
                     GUILayout.Label("This Node is invalid, please change to a valid type", EditorStyles.miniLabel);
                     break;
                 case blendType.BLEND_LERP:
-                    BlendLerp lerpNode =  (BlendLerp)currentNode;
+                    BlendLerp lerpNode = (BlendLerp)currentTree.getIndexedNode(currentNode);
                     lerpNode.parameter = EditorGUILayout.Slider("Lerp Parameter", lerpNode.parameter, 0, 1);
                     lerpNode = (BlendLerp)checkBranchOne(lerpNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
                     lerpNode = (BlendLerp)checkBranchTwo(lerpNode);
 
-                    currentNode = lerpNode;
                     break;
                 case blendType.BLEND_ADD:
-                    BlendAdd addNode = (BlendAdd)currentNode;
+                    BlendAdd addNode = (BlendAdd)currentTree.getIndexedNode(currentNode);
                     addNode = (BlendAdd)checkBranchOne(addNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
                     addNode = (BlendAdd)checkBranchTwo(addNode);
 
-                    currentNode = addNode;
                     break;
                 case blendType.BLEND_SCALE:
-                    BlendScale scaleNode = (BlendScale)currentNode;
+                    BlendScale scaleNode = (BlendScale)currentTree.getIndexedNode(currentNode);
                     scaleNode.parameter = EditorGUILayout.Slider("Scale Parameter", scaleNode.parameter, 0, 1);
                     scaleNode = (BlendScale)checkBranchOne(scaleNode);
 
-                    currentNode = scaleNode;
                     break;
                 case blendType.BLEND_AVG:
-                    BlendAvg avgNode = (BlendAvg)currentNode;
+                    BlendAvg avgNode = (BlendAvg)currentTree.getIndexedNode(currentNode);
                     avgNode.parameter1 = EditorGUILayout.Slider("Average Parameter One", avgNode.parameter1, 0, 1);
                     avgNode = (BlendAvg)checkBranchOne(avgNode);
                     GUILayout.Label("[======================]", EditorStyles.miniLabel);
                     avgNode.parameter2 = EditorGUILayout.Slider("Average Parameter Two", avgNode.parameter2, 0, 1);
                     avgNode = (BlendAvg)checkBranchTwo(avgNode);
 
-                    currentNode = avgNode;
                     break;
                 case blendType.BLEND_END:
-                    blendEnd endNode = (blendEnd)currentNode;
+                    blendEnd endNode = (blendEnd)currentTree.getIndexedNode(currentNode);
                     endNode.clip = EditorGUILayout.ObjectField("AnimationClip", endNode.clip, typeof(AnimationClip), true) as AnimationClip;
 
-                    currentNode = endNode;
                     break;
                 default:
                     break;
             }
+
+            //delete node option
         }
 
 
@@ -258,43 +251,49 @@ public class CreateBlendTree : EditorWindow
 
     BlendNode checkBranchOne(BlendNode node)
     {
-        if (node.nodeOne == null)
+        BlendNode newNode = null;
+        BlendNode atNode = currentTree.getIndexedNode(node.nextID1);
+        if (atNode == null)
         {
             GUILayout.Label("Generate new Node", EditorStyles.miniLabel);
             if(GUILayout.Button("New Lerp"))
             {
-                node.nodeOne = new BlendLerp();
+                newNode = new BlendLerp();
             }
             if (GUILayout.Button("New Scale"))
             {
-                node.nodeOne = new BlendScale();
+                newNode = new BlendScale();
             }
             if (GUILayout.Button("New Average"))
             {
-                node.nodeOne = new BlendAvg();
+                newNode = new BlendAvg();
             }
             if (GUILayout.Button("New Add"))
             {
-                node.nodeOne = new BlendAdd();
+                newNode = new BlendAdd();
             }
             if (GUILayout.Button("New End"))
             {
-                node.nodeOne = new blendEnd();
+                newNode = new blendEnd();
             }
 
-            if(node.nodeOne != null)
+            if(newNode != null)
             {
-                node.nodeOne.nodePrev = node;
+                newNode.prevIndex = node.currentIndex;
+                int currentIndex = currentTree.addNewNode(newNode);
+                node.nextID1 = currentIndex;
             }
          
         }
         else
         {
-            GUILayout.Label("Node one, type: " + node.nodeOne.nodeType, EditorStyles.miniLabel);
+
+            GUILayout.Label("Node one, type: " + atNode.GetType(), EditorStyles.miniLabel);
+            /*
             if (GUILayout.Button("Delete Node?"))
             {
                 node.nodeOne = null;
-            }
+            } */
         }
 
         return node;
@@ -302,45 +301,44 @@ public class CreateBlendTree : EditorWindow
 
     BlendNode checkBranchTwo(BlendNode node)
     {
-    
-        if (node.nodeTwo == null)
+        BlendNode newNode = null;
+        BlendNode atNode = currentTree.getIndexedNode(node.nextID2);
+        if (atNode == null)
         {
             GUILayout.Label("Generate new Node", EditorStyles.miniLabel);
             if (GUILayout.Button("New Lerp"))
             {
-                node.nodeTwo = new BlendLerp();
+                newNode = new BlendLerp();
             }
             if (GUILayout.Button("New Scale"))
             {
-                node.nodeTwo = new BlendScale();
+                newNode = new BlendScale();
             }
             if (GUILayout.Button("New Average"))
             {
-                node.nodeTwo = new BlendAvg();
+                newNode = new BlendAvg();
             }
             if (GUILayout.Button("New Add"))
             {
-                node.nodeTwo = new BlendAdd();
+                newNode = new BlendAdd();
             }
             if (GUILayout.Button("New End"))
             {
-                node.nodeTwo = new blendEnd();
+                newNode = new blendEnd();
             }
 
-            if (node.nodeTwo != null)
+            if (newNode != null)
             {
-                node.nodeTwo.nodePrev = node;
+                newNode.prevIndex = node.currentIndex;
+                int currentIndex = currentTree.addNewNode(newNode);
+                node.nextID2 = currentIndex;
             }
+
         }
         else
         {
-            GUILayout.Label("Node two, type: " + node.nodeTwo.nodeType, EditorStyles.miniLabel);
-            if (GUILayout.Button("Delete Node?"))
-            {
-                node.nodeTwo = null;
-            }
+            GUILayout.Label("Node rwo, type: " + atNode.GetType(), EditorStyles.miniLabel);
         }
-
-        return node;
+            return node;
     }
 }

@@ -20,11 +20,11 @@ public class BlendingTreePlayer : MonoBehaviour
             currentKeyFrame = 0;
         }
 
-      //  blendPoseData poseDataResult = blendTreeData.useBlendTree(currentKeyFrame);  
+        blendPoseData poseDataResult = blendTreeData.useBlendTree(blendTreeData,currentKeyFrame);  
 
         for(int i = 0; i < jointCount; i++)
         {
-            //animationObjectHierData.setNewData(poseDataResult.getData(i), i);
+            animationObjectHierData.setNewData(poseDataResult.getPoseData(i), i);
         }
     }
 }

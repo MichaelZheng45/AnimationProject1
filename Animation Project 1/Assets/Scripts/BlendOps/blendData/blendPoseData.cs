@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct blendPoseData
 {
-    blendTransformData[] poseData;
+    public blendTransformData[] poseData;
     public int size;
     public blendTransformData getPoseData(int index)
     {
@@ -38,10 +38,5 @@ public struct blendPoseData
             blendTransformData newdata = new blendTransformData(key.keyPosition, Quaternion.Euler(key.keyRotation), key.scale);
             poseData[i] = newdata;
         }
-    }
-
-    public blendTransformData getData(int index)
-    {
-        return poseData[index];
     }
 }

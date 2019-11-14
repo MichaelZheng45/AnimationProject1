@@ -12,10 +12,10 @@ public class BlendAvg : BlendNode
     }
 
 
-    public override blendPoseData blendOperation(int currentFrameID)
+    public override blendPoseData blendOperation(BlendingTree parentTree, int currentFrameID)
     {
-        blendPoseData firstPose = nodeOne.blendOperation(currentFrameID);
-        blendPoseData secondPose = nodeTwo.blendOperation(currentFrameID);
+        blendPoseData firstPose = parentTree.getIndexedNode(nextID1).blendOperation(parentTree,currentFrameID);
+        blendPoseData secondPose = parentTree.getIndexedNode(nextID2).blendOperation(parentTree, currentFrameID);
         int length = firstPose.size;
 
         for (int i = 0; i < length; i++)

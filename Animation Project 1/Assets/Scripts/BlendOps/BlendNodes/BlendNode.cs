@@ -15,17 +15,26 @@ public enum blendType
 [System.Serializable]
 public class BlendNode
 {
-    public BlendNode nodePrev;
-
-    public BlendNode nodeOne;
-
-    public BlendNode nodeTwo;
+    public int prevIndex;
+    public int currentIndex;
+    public int nextID1;
+    public int nextID2;
 
     public blendType nodeType;
 
     public BlendNode()
     {
+        nextID1 = -1;
+        nextID2 = -1;
         setType();
+    }
+
+    public void replaceConnections(BlendNode node)
+    {
+        prevIndex = node.prevIndex;
+        currentIndex = node.currentIndex;
+        nextID1 = node.nextID1;
+        nextID2 = node.nextID2;
     }
 
     public virtual void setType()
@@ -33,7 +42,7 @@ public class BlendNode
         nodeType = blendType.BLEND_INVALID;
     }
 
-    public virtual blendPoseData blendOperation(int currentFrameID)
+    public virtual blendPoseData blendOperation(BlendingTree parentTree, int currentFrameID)
     {
         return new blendPoseData();
     }

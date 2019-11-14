@@ -10,6 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a47eef20a7fa55f43b4c21e3b76c4361, type: 3}
-  m_Name: testtree
+  m_Name: BlendingTree
   m_EditorClassIdentifier: 
-  nodeCount: 0
+  NodeTree:
+  - prevIndex: -1
+    currentIndex: 0
+    nextID1: -1
+    nextID2: -1
+    nodeType: -1

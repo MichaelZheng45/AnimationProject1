@@ -6,24 +6,54 @@ using UnityEngine;
 [System.Serializable]
 public class BlendingTree : ScriptableObject
 {
-    public BlendNode rootNode;
+    public List<BlendNode> NodeTree;
 
     public BlendingTree()
     {
-        rootNode = new BlendNode();
+        NodeTree = new List<BlendNode>();
+        NodeTree.Add(new BlendNode());
+        NodeTree[0].prevIndex = -1;
+        NodeTree[0].currentIndex = 0;
     }
 
     public BlendNode getRoot()
     {
-        return rootNode;
+        return NodeTree[0];
     }
 
     public void SetRoot(BlendNode newRoot)
     {
-        rootNode = newRoot;
+        newRoot.replaceConnections(NodeTree[0]);
+
+        NodeTree[0] = newRoot;
     }
-    public blendPoseData useBlendTree(int keyFrameIndex)
+    public blendPoseData useBlendTree(BlendingTree tree,int keyFrameIndex)
     {
-        return rootNode.blendOperation(keyFrameIndex);
+        return NodeTree[0].blendOperation(tree,keyFrameIndex);
+    }
+
+    public BlendNode getIndexedNode(int index)
+    {
+        if(index == -1)
+        {
+            return null;
+        }
+        return NodeTree[index];
+    }
+
+    public void setIndexedNode(int index,BlendNode newNode)
+    {
+        Debug.Log(index);
+        newNode.replaceConnections(NodeTree[index]);
+
+        NodeTree[index] = newNode;
+    }
+
+    public int addNewNode(BlendNode node)
+    {
+        NodeTree.Add(node);
+        int newNodeId = NodeTree.IndexOf(node);
+        node.currentIndex = newNodeId;
+        return newNodeId;
     }
 }

@@ -5541,7 +5541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationObjectHierData: {fileID: 1281900964}
-  blendTreeData: {fileID: 11400000, guid: 82a202887816f714e84e60095b84361a, type: 2}
+  blendTreeData: {fileID: 0}
   play: 1
 --- !u!135 &1281900966
 SphereCollider:
