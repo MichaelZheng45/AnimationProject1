@@ -17,16 +17,26 @@ public class CreateBlendTree : EditorWindow
     [MenuItem("Window/AnimationBlendTree")]
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow(typeof(CreateBlendTree));
+        EditorWindow window = EditorWindow.GetWindow(typeof(CreateBlendTree));
+        window.maxSize = new Vector2(500f, 700f);
+        window.minSize = window.maxSize;
     }
 
     private void Update()
     {
-        
+        //some value test later
+     
     }
 
+    Texture blueTexture;
     private void OnGUI()
     {
+
+        blueTexture = EditorGUILayout.ObjectField("Texture", blueTexture, typeof(Texture), true) as Texture;
+        if(GUILayout.Button(blueTexture))
+        {
+
+        }
         //making sure the everything is in the right spot based on the blending tree, so data is not lost
         currentTree = EditorGUILayout.ObjectField("Blend Tree", currentTree, typeof(BlendingTree), true) as BlendingTree;
         if (currentTree == null)
@@ -76,7 +86,17 @@ public class CreateBlendTree : EditorWindow
     void nodeWorkings()
     {
         //navigate back to the root of tree
-        if (currentNode != 0 && GUILayout.Button("Go to root"))
+        /*
+        var style = new GUIStyle(GUI.skin.button);
+        style.normal.textColor = Color.blue;
+        GUILayout.Button("Label", style);
+        */
+
+        //button color
+        var style = new GUIStyle(GUI.skin.button);
+        style.normal.textColor = Color.blue;
+        
+        if (currentNode != 0 && GUILayout.Button("Go to root", style))
         {
             currentNode = 0;
             currentNodeType = currentTree.getRoot().nodeType;
@@ -125,7 +145,8 @@ public class CreateBlendTree : EditorWindow
 
         GUILayout.Label("Current: " + currentTree.getIndexedNode(currentNode).nodeType, EditorStyles.miniLabel);
         changeType = EditorGUILayout.Toggle("change node type", changeType);
-
+        blendType newType = blendType.BLEND_INVALID;
+        newType = (blendType)EditorGUILayout.EnumPopup("Type: ", newType);
         if(changeType)
         {
             //change type

@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19cfdf008a81dc49bd612f2bb6fdadc, type: 3}
-  m_Name: Clip1
+  m_Script: {fileID: 11500000, guid: 514d5619f871f4b46b2aff4d0e64f346, type: 3}
+  m_Name: AnimationDataHierarchal
   m_EditorClassIdentifier: 
-  animData: {fileID: 11400000, guid: c8bbb05640f70b9458d9bdd142883890, type: 2}
-  startFrame: 0
-  endFrame: 20
+  totalFrameDuration: 0
+  keyFrameCount: 0
+  framePerSecond: 0
+  calibrationUnit: 0
+  scaleFactor: 0
+  poseBase: []
