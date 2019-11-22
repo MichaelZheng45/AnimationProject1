@@ -32,11 +32,11 @@ public class CreateBlendTree : EditorWindow
     private void OnGUI()
     {
 
-        blueTexture = EditorGUILayout.ObjectField("Texture", blueTexture, typeof(Texture), true) as Texture;
-        if(GUILayout.Button(blueTexture))
-        {
+       // blueTexture = EditorGUILayout.ObjectField("Texture", blueTexture, typeof(Texture), true) as Texture;
+      //  if(GUILayout.Button(blueTexture))
+      //  {
 
-        }
+     //   }
         //making sure the everything is in the right spot based on the blending tree, so data is not lost
         currentTree = EditorGUILayout.ObjectField("Blend Tree", currentTree, typeof(BlendingTree), true) as BlendingTree;
         if (currentTree == null)
@@ -59,7 +59,7 @@ public class CreateBlendTree : EditorWindow
                 //if root is an invalid node-> create a new node
                 if (currentTree.getRoot().nodeType == blendType.BLEND_INVALID)
                 {
-                    currentNodeType = (blendType)EditorGUILayout.EnumPopup("root blend node type", currentNodeType);
+                    //currentNodeType = (blendType)EditorGUILayout.EnumPopup("root blend node type", currentNodeType);
                     if (currentNodeType != blendType.BLEND_INVALID && currentNodeType != currentTree.getRoot().nodeType)
                     {
                         currentTree.SetRoot(changeNewNode(currentNodeType));
