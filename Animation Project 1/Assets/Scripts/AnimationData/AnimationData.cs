@@ -5,9 +5,9 @@ using UnityEngine;
 
 public abstract class AnimationData : ScriptableObject
 {
-    public int totalFrameDuration; //duration of the animation, in frames ex: 80 frames to loop one animation
-    public int keyFrameCount; //how many keyframes are there
-    public float framePerSecond;
+    public int totalFrameDuration = 0; //duration of the animation, in frames ex: 80 frames to loop one animation
+    public int keyFrameCount = 0; //how many keyframes are there
+    public float framePerSecond = 0;
 
     //set how many seconds before next frame
     public virtual void setFramePerSecond(float count)

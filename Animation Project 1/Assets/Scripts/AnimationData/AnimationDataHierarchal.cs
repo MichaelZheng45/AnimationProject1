@@ -6,18 +6,55 @@ using UnityEngine;
 [System.Serializable]
 public class AnimationDataHierarchal : AnimationData
 {
-    //eulerRotationOrder
-    //calibrationUnits: mm is .001, cm is .01, dm = .1, m = 1
-    public float calibrationUnit;
-    //RotationUnits
-    //globalAxisofGravity
-    //Bone lengthAxis: default y
-    public float scaleFactor;
+	//eulerRotationOrder
+	//calibrationUnits: mm is .001, cm is .01, dm = .1, m = 1
+	public float calibrationUnit = 1;
+	//RotationUnits
+	//globalAxisofGravity
+	//Bone lengthAxis: default y
+	public float scaleFactor =1;
 
-    //poseData
-    //basePose -> contains poseNode[] each poseNode has-> string name, parentPoseNode index, bone length,
-    public poseNode[] poseBase;
+	//poseData
+	//basePose -> contains poseNode[] each poseNode has-> string name, parentPoseNode index, bone length,
+	public poseNode[] poseBase;
 
+	public void deletePoses()
+	{
+		poseBase = new poseNode[0];
+	}
+
+	public void addNewPose(GameObject obj, GameObject parentObj, int parentIndex)
+	{
+		int size = poseBase.Length;
+		poseNode[] newPoses = new poseNode[size + 1];
+		for (int i = 0; i < size; i++)
+		{
+			newPoses[i] = poseBase[i];
+		}
+		poseNode newPoseNode = new poseNode();
+		newPoseNode.name = obj.name;
+		newPoseNode.parentNodeIndex = parentIndex;
+		Transform objTransform = obj.transform;
+		if (parentIndex == -1)
+		{
+			newPoseNode.localBaseTransform = Matrix4x4.TRS(objTransform.position, objTransform.rotation, objTransform.localScale);
+			newPoseNode.globalBaseTransform = Matrix4x4.TRS(objTransform.position, objTransform.rotation, objTransform.localScale);
+
+		}
+		else
+		{
+			newPoseNode.localBaseTransform = Matrix4x4.TRS(objTransform.localPosition, objTransform.localRotation, objTransform.localScale);
+			newPoseNode.globalBaseTransform = Matrix4x4.TRS(objTransform.position, objTransform.rotation, objTransform.localScale);
+
+		}
+
+
+		newPoseNode.keyFrames = new List<KeyFrame>();
+
+		newPoses[size] = newPoseNode;
+
+		poseBase = newPoses;
+	}
     public void createBase(int count)
     {
         poseBase = new poseNode[count];

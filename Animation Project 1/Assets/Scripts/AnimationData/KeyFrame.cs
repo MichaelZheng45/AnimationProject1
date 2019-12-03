@@ -16,6 +16,14 @@ public class KeyFrame
         keyPosition = Vector3.zero;
     }
 
+	public KeyFrame(Vector3 newPosition, Vector3 newRotation, Vector3 newScale, int frame)
+	{
+		keyPosition = newPosition;
+		keyRotation = newRotation;
+		scale = newScale;
+		atFrame = frame;
+	}
+
     public KeyFrame(Vector3 newPosition)
     {
         atFrame = 0;

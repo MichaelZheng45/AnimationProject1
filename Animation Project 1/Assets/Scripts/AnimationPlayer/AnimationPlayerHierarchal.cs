@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationPlayerHierarchal : MonoBehaviour
 {
     public AnimationDataHierarchal animData;
-
+	public gameObjectMain objHierarchy;
     public bool play = false;
 
     public int frameCount = 0;
@@ -63,7 +63,7 @@ public class AnimationPlayerHierarchal : MonoBehaviour
                     animData.poseBase[i].currentTransform = animData.poseBase[parentIndex].currentTransform * deltaMatrix;
                 }
 
-             //   animData.poseBase[i].updateNewPosition();
+              animData.poseBase[i].updateNewPosition(objHierarchy.getObject(i));
             }
         }
     }
