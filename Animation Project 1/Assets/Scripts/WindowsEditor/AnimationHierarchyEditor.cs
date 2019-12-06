@@ -64,40 +64,136 @@ public class AnimationHierarchyEditor : EditorWindow
         if(animData.totalFrameDuration != animData.keyFrameCount)
         {
             //update by adding/removing all keyframes and then update
+            int oldCount = animData.keyFrameCount;
+            int newCount = animData.totalFrameDuration;
+
+            bool[] newPrioKeyList = new bool[newCount];
+            int recentPrimaryKey = 0;
+
+            for(int i = 0; i < newCount; i++)
+            {
+                //if the new size is exceeding the old count
+                if(i >= oldCount)
+                {
+                    newPrioKeyList[i] = false;
+
+                }
+                else
+                {
+                    newPrioKeyList[i] = animData.prioFrameKey[i];
+                }
+
+                if(newPrioKeyList[i])
+                {
+                    recentPrimaryKey = i;
+                }
+            }
+            //set last key to true
+            newPrioKeyList[newCount - 1] = true;
+
+            //if the recent primary key is the last one
+            if (recentPrimaryKey == newCount-1)
+            {
+                //do nothing because the frames are already set up
+            }
+            else
+            {
+                //lerp between the recent frame and last one
+                lerpBetweenFrames(recentPrimaryKey,newCount-1);
+            }
+        
+        }
+
+        GUILayout.Space(20);
+        GUILayout.Label("Key Frame Options", EditorStyles.boldLabel);
+        currentKeyFrame = EditorGUILayout.IntField("Current Key Frame", currentKeyFrame);
+        
+        //bound the currentKeyframe within the limits
+        if (currentKeyFrame >= animData.totalFrameDuration)
+        {
+            currentKeyFrame = animData.totalFrameDuration - 1;
+        }
+        else if(currentKeyFrame < 0 )
+        {
+            currentKeyFrame = 0;
+        }
+
+        GUILayout.Space(20);
+        GUILayout.Label("Pose options", EditorStyles.boldLabel);
+        
+        if(GUILayout.Button("Set to current pose"))
+        {
+
+        }
+
+        if(GUILayout.Button("Set to base pose"))
+        {
+
+        }
+
+        GUILayout.Space(20);
+        GUILayout.Label("Current Key Frame", EditorStyles.boldLabel);
+
+        //current key cannot be toggled if it is the first or last
+        if(currentKeyFrame != 0 && currentKeyFrame < animData.totalFrameDuration-1)
+        {
+            animData.prioFrameKey[currentKeyFrame] = EditorGUILayout.Toggle("Primary Key", animData.prioFrameKey[currentKeyFrame]);
+        }
+        else
+        {
+            GUILayout.Label("Primary Key: True");
+        }
+     
+        
+        //check on if it had been toggled if so update
+        //find the two neighbor primaries
+        //if toggled off lerp between the two, if toggled true lerp from to this, then lerp this to to
+
+        //if it is primary key
+        if(animData.prioFrameKey[currentKeyFrame])
+        {
+            if (GUILayout.Button("Set New Pose to Frame"))
+            {
+
+            }
+        }
+        else
+        {
+            //it is a secondary key
+            //just show data
+        }
+
+	}
+
+    //from is the starting frame (should be the first or last frame), to is the current key frame
+    //find the closest primary keyframe, if from is smaller than to it will go up and find the one before if reversed it will search backwards and find the one after
+    void findPrimaryKeyFrame(int from, int to)
+    {
+        int updater = 1;
+        if(from > to)
+        {
+            //from is greater than to meaning it needs to go backwards
+            updater = -1;
         }
 
 
-        //needs to be changed
-		if(GUILayout.Button("Set New Frame"))
-		{
-			animData.keyFrameCount++;
-			animData.totalFrameDuration++;
+        //will stop once i is at to but if i is ever less than 0 or greater than the duration, stop
+        for (int i = from; i != to && (i >= 0 && i < animData.totalFrameDuration-1); i += updater)
+        {
 
-			for(int i = 0; i < animData.poseBase.Length; i++)
-			{
-				//create new keyframe
-				Transform poseObj = gameObjectHierarchy.getObject(i).transform;
-				Vector3 localPosition = animData.poseBase[i].getLocalPosition();
-				Vector3 localRotation = animData.poseBase[i].getLocalRotationEuler();
+        }
+    }
 
-				KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localEulerAngles - localRotation, poseObj.localScale, animData.keyFrameCount - 1);
-				animData.poseBase[i].keyFrames.Add(newKey);
-			}
-		}
+    void lerpBetweenFrames(int from, int to)
+    {
+        for (int i = from + 1; i < to; i++)
+        {
 
-		if(animData.keyFrameCount > 0 && GUILayout.Button("Remove Recent Key Frame"))
-		{
-			int recentKeyCount = animData.keyFrameCount;
-			animData.keyFrameCount--;
-			animData.totalFrameDuration--;
-			for (int i = 0; i < animData.poseBase.Length; i++)
-			{
-				animData.poseBase[i].keyFrames.RemoveAt(recentKeyCount);
-			}
-		}
-	}
+        }
+    }
 
-    void copydownData(int jointID, int frameNumber)
+    //writes down data of the current transform of the gameobjects
+    void copydownData(int jointID, int frameNumber, bool add)
     {
         //create new keyframe
         Transform poseObj = gameObjectHierarchy.getObject(jointID).transform;
@@ -105,9 +201,19 @@ public class AnimationHierarchyEditor : EditorWindow
         Vector3 localRotation = animData.poseBase[jointID].getLocalRotationEuler();
 
         KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localEulerAngles - localRotation, poseObj.localScale, animData.keyFrameCount - 1);
-        animData.poseBase[jointID].keyFrames[frameNumber] = newKey;
+        if(add)
+        {
+            animData.poseBase[jointID].keyFrames.Add(newKey);
+        }
+        else
+        {
+            animData.poseBase[jointID].keyFrames[frameNumber] = newKey;
+        }
+
     }
 
+
+    //recursive call to checkchild of the current game object used for generating a new hierarchy
 	void checkChildren(GameObject currentObject, int currentIndex)
 	{
 		foreach(Transform child in currentObject.transform)
@@ -118,6 +224,7 @@ public class AnimationHierarchyEditor : EditorWindow
 		}
 	}
 
+    //generate a new hierarchy data with a root heirarchy and object heirarchy
 	void newHierarchy()
 	{
 		
@@ -144,15 +251,10 @@ public class AnimationHierarchyEditor : EditorWindow
                 {
                     animData.prioFrameKey[i] = false;
 
+                    //reason to go throught each pose is because we want to fill the frames with dummy data
                     for (int j = 0; j < animData.poseBase.Length; j++)
                     {
-                        //create new keyframe
-                        Transform poseObj = gameObjectHierarchy.getObject(j).transform;
-                        Vector3 localPosition = animData.poseBase[j].getLocalPosition();
-                        Vector3 localRotation = animData.poseBase[j].getLocalRotationEuler();
-
-                        KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localEulerAngles - localRotation, poseObj.localScale, animData.keyFrameCount - 1);
-                        animData.poseBase[j].keyFrames.Add(newKey);
+                        copydownData(j,i, true);
                     }
 
                 }

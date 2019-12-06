@@ -1,7 +1,7 @@
-window renderer of animation
+window renderer of animation -> able to toggle from full animation or current pose
 
 primary and secondary keyframes
-able to change duration ->automatically update last primary based on the current pose
+able to change duration ->automatically update last primary based on the current pose (almost done)
 
 
 selecting current frame
@@ -11,3 +11,10 @@ move to next or previous primary keyframe
 updating primary keyframe -> update secondary keyframes with lerp
 
 visual representation of all the keyframes
+
+fk static function?
+
+option to set to current pose in scene
+option to set to base pose in scene
+
+for toggling -> maybe have it so when you toggle it and check with a duplicated list and check if there has been any changes if so the update
