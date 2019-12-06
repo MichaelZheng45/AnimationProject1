@@ -14,6 +14,8 @@ public class AnimationDataHierarchal : AnimationData
 	//Bone lengthAxis: default y
 	public float scaleFactor =1;
 
+    public bool[] prioFrameKey;
+
 	//poseData
 	//basePose -> contains poseNode[] each poseNode has-> string name, parentPoseNode index, bone length,
 	public poseNode[] poseBase;
@@ -139,6 +141,7 @@ public class poseNode
 
     public Quaternion getCurrentRotationQ()
     {
+        
         Quaternion rotation = Quaternion.LookRotation(currentTransform.GetColumn(2), currentTransform.GetColumn(1));
         return rotation;
     }

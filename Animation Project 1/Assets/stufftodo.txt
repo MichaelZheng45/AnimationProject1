@@ -1,0 +1,13 @@
+window renderer of animation
+
+primary and secondary keyframes
+able to change duration ->automatically update last primary based on the current pose
+
+
+selecting current frame
+toggling primary and secondary key frame -> and update secondary keyframes
+move to next or previous primary keyframe 
+
+updating primary keyframe -> update secondary keyframes with lerp
+
+visual representation of all the keyframes

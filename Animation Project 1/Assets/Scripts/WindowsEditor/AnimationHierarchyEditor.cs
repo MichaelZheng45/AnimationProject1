@@ -7,10 +7,16 @@ public class AnimationHierarchyEditor : EditorWindow
 {
 	public AnimationDataHierarchal animData;
 	public gameObjectMain gameObjectHierarchy;
-	int currentKeyFrame;
+	int currentKeyFrame = 0;
 
 	bool createNewHierarchy = false;
-	[MenuItem("Window/AnimationHierarchyEditor")]
+
+    int lineBasePosY = 200;
+    int lineMaxPosY = 300;
+    int lineMaxPosX = 400;
+    int xShift = 50;
+
+    [MenuItem("Window/AnimationHierarchyEditor")]
 	public static void ShowWindow()
 	{
 		EditorWindow.GetWindow(typeof(AnimationHierarchyEditor));
@@ -24,7 +30,10 @@ public class AnimationHierarchyEditor : EditorWindow
 
 	private void OnGUI()
 	{
-		animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationDataHierarchal), true) as AnimationDataHierarchal;
+        Rect rectangle = new Rect(new Vector2(xShift, lineBasePosY), new Vector2(lineMaxPosX, lineMaxPosY - lineBasePosY));
+        EditorGUI.DrawRect(rectangle, Color.gray);
+
+        animData = EditorGUILayout.ObjectField("AnimationData", animData, typeof(AnimationDataHierarchal), true) as AnimationDataHierarchal;
 
 		if(!animData)
 		{
@@ -48,7 +57,17 @@ public class AnimationHierarchyEditor : EditorWindow
 
 	void modifyAnimationData()
 	{
+        
 		animData.framePerSecond = EditorGUILayout.FloatField("FrameRate(in seconds)", animData.framePerSecond);
+
+        animData.totalFrameDuration = EditorGUILayout.IntField("Frame Duration", animData.totalFrameDuration);
+        if(animData.totalFrameDuration != animData.keyFrameCount)
+        {
+            //update by adding/removing all keyframes and then update
+        }
+
+
+        //needs to be changed
 		if(GUILayout.Button("Set New Frame"))
 		{
 			animData.keyFrameCount++;
@@ -78,6 +97,17 @@ public class AnimationHierarchyEditor : EditorWindow
 		}
 	}
 
+    void copydownData(int jointID, int frameNumber)
+    {
+        //create new keyframe
+        Transform poseObj = gameObjectHierarchy.getObject(jointID).transform;
+        Vector3 localPosition = animData.poseBase[jointID].getLocalPosition();
+        Vector3 localRotation = animData.poseBase[jointID].getLocalRotationEuler();
+
+        KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localEulerAngles - localRotation, poseObj.localScale, animData.keyFrameCount - 1);
+        animData.poseBase[jointID].keyFrames[frameNumber] = newKey;
+    }
+
 	void checkChildren(GameObject currentObject, int currentIndex)
 	{
 		foreach(Transform child in currentObject.transform)
@@ -98,14 +128,38 @@ public class AnimationHierarchyEditor : EditorWindow
 			if(rootObject)
 			{
 				gameObjectHierarchy.animData = animData;
-				animData.deletePoses();
+
+                //remove old poses and start updating heirarchy
+                animData.deletePoses();
 				gameObjectHierarchy.newList();
 				createNewHierarchy = false;
 
 				int rootIndex = gameObjectHierarchy.addObjectWithIndex(rootObject, -1);
 				animData.addNewPose(rootObject, rootObject, -1);
 				checkChildren(rootObject, rootIndex);
-			}
+
+                //update all old frames and update new ones
+                animData.prioFrameKey = new bool[animData.totalFrameDuration];
+                for (int i = 0; i < animData.totalFrameDuration; i++)
+                {
+                    animData.prioFrameKey[i] = false;
+
+                    for (int j = 0; j < animData.poseBase.Length; j++)
+                    {
+                        //create new keyframe
+                        Transform poseObj = gameObjectHierarchy.getObject(j).transform;
+                        Vector3 localPosition = animData.poseBase[j].getLocalPosition();
+                        Vector3 localRotation = animData.poseBase[j].getLocalRotationEuler();
+
+                        KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localEulerAngles - localRotation, poseObj.localScale, animData.keyFrameCount - 1);
+                        animData.poseBase[j].keyFrames.Add(newKey);
+                    }
+
+                }
+                //the last and first keys are primary keys by default and always will be
+                animData.prioFrameKey[0] = true;
+                animData.prioFrameKey[animData.totalFrameDuration - 1] = true;
+            }
 		}
 		else
 		{
