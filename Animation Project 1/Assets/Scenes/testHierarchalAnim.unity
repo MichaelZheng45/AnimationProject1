@@ -993,7 +993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69cc72746181a443939127b05b85fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animData: {fileID: 11400000, guid: d6d8bb91acea6ca498a009a5f4155673, type: 2}
   ObjectHierarchy:
   - {fileID: 1842740870}
   - {fileID: 18788160}

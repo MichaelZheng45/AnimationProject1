@@ -139,7 +139,6 @@ public class HTRFileReader : EditorWindow
                         newJoint.AddComponent<gameObjectMain>();
                         mainObjStructure = newJoint.GetComponent<gameObjectMain>();
                         mainObjStructure.newList();
-                        mainObjStructure.animData = animData;
                         mainObjStructure.addObject(newJoint);
                     }
                     else

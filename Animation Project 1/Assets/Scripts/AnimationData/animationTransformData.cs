@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct blendTransformData
+public struct animationTransformData
 {
     public Vector3 localPosition;
     public Quaternion localRotation;
     public Vector3 localScale;
 
-    public blendTransformData(Vector3 position, Quaternion rotation, Vector3 scale)
+	public animationTransformData(Vector3 position, Quaternion rotation, Vector3 scale)
+	{
+		localPosition = position;
+		localRotation = rotation;
+		localScale = scale;
+	}
+	public animationTransformData(int value = 0)
     {
-        localPosition = position;
-        localRotation = rotation;
-        localScale = scale;
+		localPosition = Vector3.zero;
+		localRotation = Quaternion.identity;
+		localScale = new Vector3(1, 1, 1);
     }
 
     public Vector3 localEulerAngles()

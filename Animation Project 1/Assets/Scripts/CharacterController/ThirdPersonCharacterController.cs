@@ -104,9 +104,9 @@ public class ThirdPersonCharacterController : MonoBehaviour
 		bool usingQuaternion = true;
 		for (int i = 0; i < currentAnim.poseBase.Length; i++)
 		{
-			blendTransformData poseresult = new blendTransformData();
-			blendTransformData dataPose0 = new blendTransformData();
-			blendTransformData dataPose1 = new blendTransformData();
+			animationTransformData poseresult = new animationTransformData();
+			animationTransformData dataPose0 = new animationTransformData();
+			animationTransformData dataPose1 = new animationTransformData();
 			KeyFrame key0 = prevAnim.poseBase[i].keyFrames[currentFrame];
 			KeyFrame key1 = currentAnim.poseBase[i].keyFrames[currentFrame];
 			dataPose0.setTransformIndividual(key0.keyPosition, Quaternion.Euler(key0.keyRotation), new Vector3(1, 1, 1));

@@ -1,20 +1,59 @@
 window renderer of animation -> able to toggle from full animation or current pose
 
 primary and secondary keyframes
-able to change duration ->automatically update last primary based on the current pose (almost done)
+able to change duration ->automatically update last primary based on the current pose (done)
 
 
 selecting current frame
-toggling primary and secondary key frame -> and update secondary keyframes
-move to next or previous primary keyframe 
+toggling primary and secondary key frame -> and update secondary keyframes (done)
+move to next or previous primary keyframe (done)
 
-updating primary keyframe -> update secondary keyframes with lerp
+updating primary keyframe -> update secondary keyframes with lerp(done)
 
-visual representation of all the keyframes
+visual representation of all the keyframes (done)
 
-fk static function?
+fk static function? (done)
 
-option to set to current pose in scene
-option to set to base pose in scene
+option to set to current pose in scene (done)
+option to set to base pose in scene (done)
 
-for toggling -> maybe have it so when you toggle it and check with a duplicated list and check if there has been any changes if so the update
+for toggling -> maybe have it so when you toggle it and check with a duplicated list and check if there has been any changes if so the update (done)
+have a button that would actually update the framecount (done)
+
+
+
+
+
+Presentation guidlines
+===============================
+Intro: Explanation of why I made this
+Introduce the issues and how the ways to do it is difficult - Doing animation itself is rough
+point 1: Frame by frame animation is slow and tedious as well as not precise -> show an example
+point 2: Keyframe to Keyframe is good but there is a lack of usability where data is hidden
+
+Introduce the priority keys
+What are priority keys -> frames are labeled under two types primary and secondary
+show diagrams
+Primary-> are the keyframes that we know about it is virtually the same thing
+Secondary-> these are the keyframes that is generated stored data between lerps
+
+Visually show what they are
+
+Show what an empty animation would look like-> only two primary keys, front and back
+Rule: The first and last frames will always be primary
+Show what a diagram of an example of the primary keys would look like 
+Rule: Any key can be a primary key and vice versa
+Show: Toggling off a primary key
+Show: Toggling on a primary key
+
+Pros:
+You have alot of control on how to change animation, like if you want to change a specific part in the animation but still show fluidly (show dabbing)
+It does not use operations such as lerp during play, this can increase performance especially if you have many animations that require such operation
+
+Cons:
+Not versatile, it cannot replace animation graphs
+
+In scene-> 4 examples show the window editor
+show when you you want to make a new rig and animation stuff
+show what happens when you toggle off a key
+show what happens when you toggle on a key

@@ -60,7 +60,7 @@ public class BlendNode
 
                 for (int i = 0; i < length; i++)
                 {
-                    blendTransformData transformData;
+                    animationTransformData transformData;
 
                     transformData = blendStatic.lerp(firstPose.getPoseData(i), secondPose.getPoseData(i), parameter1, true);
                     firstPose.setPoseData(transformData, i);
@@ -75,7 +75,7 @@ public class BlendNode
 
                 for (int i = 0; i < length; i++)
                 {
-                    blendTransformData transformData;
+                    animationTransformData transformData;
 
                     transformData = blendStatic.add(firstPose.getPoseData(i), secondPose.getPoseData(i), true);
                     firstPose.setPoseData(transformData, i);
@@ -89,7 +89,7 @@ public class BlendNode
 
                 for (int i = 0; i < length; i++)
                 {
-                    blendTransformData transformData = firstPose.getPoseData(i);
+                    animationTransformData transformData = firstPose.getPoseData(i);
                     identity newIdentity = new identity();
                     transformData = blendStatic.scale(newIdentity, transformData, parameter1, true);
                     firstPose.setPoseData(transformData, i);
@@ -103,7 +103,7 @@ public class BlendNode
 
                 for (int i = 0; i < length; i++)
                 {
-                    blendTransformData transformData;
+                    animationTransformData transformData;
                     identity nIdentity = new identity();
 
                     transformData = blendStatic.average(nIdentity, firstPose.getPoseData(i), secondPose.getPoseData(i), parameter1, parameter2, true);

@@ -7,6 +7,7 @@ public class KeyFrame
 {
     public Vector3 keyPosition;
     public Vector3 keyRotation;
+	public Quaternion keyQRotation;
     public Vector3 scale;
 	public int atFrame;
 
@@ -24,7 +25,29 @@ public class KeyFrame
 		atFrame = frame;
 	}
 
-    public KeyFrame(Vector3 newPosition)
+	public KeyFrame(Vector3 newPosition, Quaternion newRotation, Vector3 newScale, int frame)
+	{
+		keyPosition = newPosition;
+		keyQRotation = newRotation;
+		scale = newScale;
+		atFrame = frame;
+	}
+
+	public KeyFrame(Vector3 newPosition, Vector3 newRotation, Vector3 newScale)
+	{
+		keyPosition = newPosition;
+		keyRotation = newRotation;
+		scale = newScale;
+	}
+	public KeyFrame(Vector3 newPosition, Quaternion newRotation, Vector3 newScale)
+	{
+		keyPosition = newPosition;
+		keyQRotation = newRotation;
+		scale = newScale;
+	}
+
+
+	public KeyFrame(Vector3 newPosition)
     {
         atFrame = 0;
         keyPosition = newPosition;

@@ -18,9 +18,26 @@ public class identity
 public static class blendStatic
 {
 
-    public static blendTransformData lerp(blendTransformData pose_0, blendTransformData pose_1, float parameter, bool usingQuaternion = false)
+	public static KeyFrame lerpKey(KeyFrame from, KeyFrame to, float parameter, bool usingQuaternion = false)
+	{
+		KeyFrame newKey = new KeyFrame();
+		//translation: literal linear interpolation
+		newKey.keyPosition = Vector3.Lerp(from.keyPosition, to.keyPosition, parameter);
+
+		//scale: ditto
+		newKey.scale = Vector3.Lerp(from.scale, to.scale, parameter);
+		//rotation: slerp if quaternion (or NLERP) otherwise euler lerp
+		if (usingQuaternion)
+			newKey.keyQRotation = Quaternion.Slerp(from.keyQRotation, to.keyQRotation, parameter);
+		else
+			newKey.keyRotation = (Vector3.Lerp(from.keyRotation, to.keyRotation, parameter));
+
+		return newKey;
+	}
+
+	public static animationTransformData lerp(animationTransformData pose_0, animationTransformData pose_1, float parameter, bool usingQuaternion = false)
     {
-        blendTransformData poseresult = new blendTransformData();
+        animationTransformData poseresult = new animationTransformData();
         //translation: literal linear interpolation
         poseresult.localPosition = Vector3.Lerp(pose_0.localPosition, pose_1.localPosition, parameter);
 
@@ -35,9 +52,9 @@ public static class blendStatic
         return poseresult;
     }
 
-    public static blendTransformData add(blendTransformData pose0, blendTransformData pose1, bool usingQuaternion)
+    public static animationTransformData add(animationTransformData pose0, animationTransformData pose1, bool usingQuaternion)
     {
-        blendTransformData poseresult = new blendTransformData();
+        animationTransformData poseresult = new animationTransformData();
         //translation literal addition
         poseresult.localPosition = pose0.localPosition + pose1.localPosition;
 
@@ -58,9 +75,9 @@ public static class blendStatic
         return poseresult;
     }
 
-    public static blendTransformData scale(identity nIdentity, blendTransformData pose_1, float parameter, bool usingQuaternion)
+    public static animationTransformData scale(identity nIdentity, animationTransformData pose_1, float parameter, bool usingQuaternion)
     {
-        blendTransformData poseresult = new blendTransformData();
+        animationTransformData poseresult = new animationTransformData();
         //translation: literal linear interpolation
         poseresult.localPosition = Vector3.Lerp(nIdentity.position, pose_1.localPosition, parameter);
 
@@ -74,10 +91,10 @@ public static class blendStatic
         return poseresult;
     }
 
-    public static blendTransformData average(identity nIdentity, blendTransformData pose_0, blendTransformData pose_1, float parameter0, float parameter1, bool usingQuaternion)
+    public static animationTransformData average(identity nIdentity, animationTransformData pose_0, animationTransformData pose_1, float parameter0, float parameter1, bool usingQuaternion)
     {
-        blendTransformData newPose_0 = scale( new identity(), pose_0, parameter0, usingQuaternion);
-        blendTransformData newPose_1 = scale( new identity(), pose_1, parameter1, usingQuaternion);
+        animationTransformData newPose_0 = scale( new identity(), pose_0, parameter0, usingQuaternion);
+        animationTransformData newPose_1 = scale( new identity(), pose_1, parameter1, usingQuaternion);
         return add(newPose_0, newPose_1, usingQuaternion);
     }
 }

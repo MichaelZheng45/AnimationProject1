@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlendingTreePlayer : MonoBehaviour
 {
     public gameObjectMain animationObjectHierData;
+	public AnimationDataHierarchal animData; //just need to contain the hierarchy data (base pose)
     public BlendingTree blendTreeData;
     public bool play;
 
@@ -24,7 +25,7 @@ public class BlendingTreePlayer : MonoBehaviour
 
         for(int i = 0; i < jointCount; i++)
         {
-            animationObjectHierData.setNewData(poseDataResult.getPoseData(i), i);
+            ForwardKinematics.setData(animationObjectHierData, animData ,poseDataResult.getPoseData(i), i);
         }
     }
 }

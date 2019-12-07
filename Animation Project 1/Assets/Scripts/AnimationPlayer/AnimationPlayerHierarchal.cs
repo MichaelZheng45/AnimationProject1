@@ -50,7 +50,7 @@ public class AnimationPlayerHierarchal : MonoBehaviour
                 Vector3 localRotation = animData.poseBase[i].getLocalRotationEuler();
 
                 //find delta change from localpose
-                Matrix4x4 deltaMatrix = Matrix4x4.TRS(localPosition + toKey.keyPosition, Quaternion.Euler(localRotation + toKey.keyRotation), new Vector4(1, 1, 1, 1));
+                Matrix4x4 deltaMatrix = Matrix4x4.TRS(localPosition + toKey.keyPosition, toKey.keyQRotation, new Vector4(1, 1, 1, 1));
 
                 if (parentIndex == -1)
                 {
