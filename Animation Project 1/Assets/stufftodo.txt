@@ -1,4 +1,4 @@
-window renderer of animation -> able to toggle from full animation or current pose
+window renderer of animation -> able to toggle from full animation or current pose (this cannot be done)
 
 primary and secondary keyframes
 able to change duration ->automatically update last primary based on the current pose (done)
@@ -53,7 +53,8 @@ It does not use operations such as lerp during play, this can increase performan
 Cons:
 Not versatile, it cannot replace animation graphs
 
-In scene-> 4 examples show the window editor
+In scene-> 4 examples. 
 show when you you want to make a new rig and animation stuff
+show the window editor, explain what each thing is
 show what happens when you toggle off a key
 show what happens when you toggle on a key

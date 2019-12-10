@@ -1,0 +1,3301 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514d5619f871f4b46b2aff4d0e64f346, type: 3}
+  m_Name: Example2
+  m_EditorClassIdentifier: 
+  totalFrameDuration: 30
+  keyFrameCount: 30
+  framePerSecond: 0.05
+  calibrationUnit: 1
+  scaleFactor: 1
+  prioFrameKey: 010000000000000000000000000000010000000000000000000000000001
+  poseBase:
+  - name: ExampleRoot2
+    parentNodeIndex: -1
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: UpperSpine
+    parentNodeIndex: 0
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightShoulder
+    parentNodeIndex: 1
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.91
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.19
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.98062444
+      e12: -0.19589719
+      e13: 1.3
+      e20: 0
+      e21: 0.19589719
+      e22: 0.98062444
+      e23: 16.19
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0.00000017881393}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.33824527, y: -0, z: -0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0.000000166893}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.29460752, y: -0, z: -0, w: 0.9556184}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000015497207}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.25034624, y: -0, z: -0, w: 0.9681564}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000014305115}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.2055552, y: -0, z: -0, w: 0.9786455}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000013113022}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.16032916, y: -0, z: -0, w: 0.98706365}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000011920929}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.11476379, y: -0, z: -0, w: 0.9933928}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000010728836}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.068955615, y: -0, z: -0, w: 0.9976198}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000009536743}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.023001429, y: -0, z: -0, w: 0.9997354}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000083446494}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.023001406, y: -0, z: -0, w: 0.9997354}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000007152557}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.068955556, y: -0, z: -0, w: 0.99761975}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000005960464}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.11476375, y: -0, z: -0, w: 0.9933928}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000047683713}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.16032912, y: -0, z: -0, w: 0.98706365}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000035762785}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.20555514, y: -0, z: -0, w: 0.9786455}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000023841856}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.25034618, y: -0, z: -0, w: 0.96815646}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000011920928}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.29460743, y: -0, z: -0, w: 0.9556185}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382452, y: -0, z: -0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0.000000012772425}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.2914655, y: -0, z: -0, w: 0.9565814}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000002554485}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.2439777, y: -0, z: -0, w: 0.9697809}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000003831727}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.19589725, y: -0, z: -0, w: 0.9806245}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000000510897}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.14734085, y: -0, z: -0, w: 0.9890858}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000006386212}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.09842653, y: -0, z: -0, w: 0.9951443}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000007663454}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.04927308, y: -0, z: -0, w: 0.9987854}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000008940697}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.0000000234068, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000001021794}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.049273174, y: -0, z: -0, w: 0.9987854}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000011495182}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.09842658, y: -0, z: -0, w: 0.9951443}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000012772423}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.14734092, y: -0, z: -0, w: 0.9890858}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000014049667}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.1958973, y: -0, z: -0, w: 0.98062444}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000015326908}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.24397779, y: -0, z: -0, w: 0.9697808}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000001660415}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.29146555, y: -0, z: -0, w: 0.95658135}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000017881393}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.33824527, y: -0, z: -0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightElbow
+    parentNodeIndex: 2
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.021999955
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -1.19
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3219999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 15
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.80161184
+      e12: -0.59784484
+      e13: 1.5546913
+      e20: 0
+      e21: 0.59784484
+      e22: 0.80161184
+      e23: 15.027368
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0.000000059604645, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.00000014901161, y: -0, z: -0, w: 1.0000001}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.000000055631002, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.02300127, y: -0, z: -0, w: 0.9997355}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000005165736, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.04599052, y: -0, z: -0, w: 0.99894196}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000047683717, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.06895543, y: -0, z: -0, w: 0.9976198}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000043710074, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.09188386, y: -0, z: -0, w: 0.99576974}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000039736427, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.11476366, y: -0, z: -0, w: 0.9933928}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000003576279, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.13758275, y: -0, z: -0, w: 0.99049044}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000031789142, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.16032901, y: -0, z: -0, w: 0.9870635}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000278155, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.18299048, y: -0, z: -0, w: 0.98311466}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000023841856, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.2055551, y: -0, z: -0, w: 0.9786455}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000019868214, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.22801095, y: -0, z: -0, w: 0.97365856}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000015894571, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.25034612, y: -0, z: -0, w: 0.9681564}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000011920928, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.2725489, y: -0, z: -0, w: 0.962142}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000079472855, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.29460746, y: -0, z: -0, w: 0.95561844}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000039736427, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.31651005, y: -0, z: -0, w: 0.9485892}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382452, y: -0, z: -0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.000000004257475, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.314951, y: -0, z: -0, w: 0.94910806}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000000851495, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.29146546, y: -0, z: -0, w: 0.95658135}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000012772424, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.26780292, y: -0, z: -0, w: 0.9634737}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000170299, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.24397768, y: -0, z: -0, w: 0.9697809}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000021287374, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.22000423, y: -0, z: -0, w: 0.9754989}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000025544848, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.19589715, y: -0, z: -0, w: 0.9806244}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000029802322, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.1716711, y: -0, z: -0, w: 0.9851544}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000340598, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.14734074, y: -0, z: -0, w: 0.9890858}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000003831727, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.12292093, y: -0, z: -0, w: 0.9924165}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000042574747, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.09842642, y: -0, z: -0, w: 0.9951444}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000004683222, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.073872164, y: -0, z: -0, w: 0.99726784}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000051089696, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.04927299, y: -0, z: -0, w: 0.99878544}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000005534717, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.024643917, y: -0, z: -0, w: 0.99969643}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000059604645, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.00000014901161, y: -0, z: -0, w: 1.0000001}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightWrist
+    parentNodeIndex: 3
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -1.2049999
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3219999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 13.795
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.23758943
+      e12: -0.97136563
+      e13: 2.2750943
+      e20: 0
+      e21: 0.97136563
+      e22: 0.23758943
+      e23: 14.061425
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: -0.00000029802322, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: -0, z: -0, w: 0.94105816}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: -0.000000278155, z: -0.00000022252401}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824506, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000002582868, z: -0.00000020662944}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000023841858, z: -0.00000019073487}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000021855035, z: -0.0000001748403}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824512, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000019868214, z: -0.00000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824512, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000017881393, z: -0.00000014305115}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000015894572, z: -0.00000012715657}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000001390775, z: -0.000000111262}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000011920928, z: -0.000000095367426}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000099341065, z: -0.000000079472855}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000079472855, z: -0.000000063578284}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000005960464, z: -0.000000047683713}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824518, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000039736427, z: -0.000000031789142}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824518, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000019868214, z: -0.000000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382452, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382452, y: -0, z: -0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: -0.000000021287374, z: -0.0000000170299}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382452, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000042574747, z: -0.0000000340598}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824518, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000006386212, z: -0.000000051089696}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824518, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000085149495, z: -0.0000000681196}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000010643687, z: -0.000000085149495}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.941058}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000012772423, z: -0.00000010217939}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000014901161, z: -0.00000011920929}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000017029899, z: -0.0000001362392}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824515, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000019158635, z: -0.00000015326908}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824512, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000021287374, z: -0.00000017029899}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824512, y: 0, z: 0, w: 0.9410581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000023416109, z: -0.00000018732888}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000025544847, z: -0.00000020435878}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000027673585, z: -0.00000022138867}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.33824506, y: 0, z: 0, w: 0.94105804}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000029802322, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.3382451, y: -0, z: -0, w: 0.94105816}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: LeftShoulder
+    parentNodeIndex: 1
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.81
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.91
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.99178636
+      e12: 0.12790538
+      e13: 1.3
+      e20: 0
+      e21: -0.12790538
+      e22: 0.99178636
+      e23: 17.91
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: -0.0000005364418}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.22256956, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000500679}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.19329834, y: -0, z: -0, w: 0.9811401}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000004649162}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.16385399, y: -0, z: -0, w: 0.98648465}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000042915343}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.13426292, y: -0, z: -0, w: 0.9909458}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000039339065}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.10455161, y: -0, z: -0, w: 0.99451953}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000035762787}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.07474665, y: -0, z: -0, w: 0.9972025}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000003218651}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.044874806, y: -0, z: -0, w: 0.9989927}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000002861023}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.014962718, y: -0, z: -0, w: 0.99988806}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000002503395}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.014962744, y: -0, z: -0, w: 0.99988806}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000021457672}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.044874813, y: -0, z: -0, w: 0.9989927}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000017881392}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.074746676, y: -0, z: -0, w: 0.9972026}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000014305114}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.10455163, y: -0, z: -0, w: 0.99451953}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000010728836}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.13426292, y: -0, z: -0, w: 0.99094576}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000007152557}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.163854, y: -0, z: -0, w: 0.98648465}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000035762785}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.19329834, y: -0, z: -0, w: 0.9811401}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256956, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000038317275}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.19120057, y: -0, z: -0, w: 0.98155093}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000007663455}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.15963505, y: -0, z: -0, w: 0.98717606}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000011495182}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.12790541, y: -0, z: -0, w: 0.9917864}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000001532691}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.096044295, y: -0, z: -0, w: 0.9953771}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000019158637}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.06408442, y: -0, z: -0, w: 0.9979445}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000022990363}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.032058682, y: -0, z: -0, w: 0.9994859}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000002682209}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000003065382}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.03205871, y: -0, z: -0, w: 0.9994859}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000034485544}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.06408442, y: -0, z: -0, w: 0.9979445}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000038317273}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.0960443, y: -0, z: -0, w: 0.9953771}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000042148997}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.12790541, y: -0, z: -0, w: 0.9917864}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000045980727}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.15963505, y: -0, z: -0, w: 0.98717606}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000004981245}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.19120057, y: -0, z: -0, w: 0.98155093}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000005364418}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.22256956, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: 'LeftElbow '
+    parentNodeIndex: 5
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0.021999836
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 1.23
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3219998
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 19.14
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.91427463
+      e12: 0.40509495
+      e13: 1.4791428
+      e20: 0
+      e21: -0.40509495
+      e22: 0.91427463
+      e23: 19.127083
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0.00000011920929, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.00000010430813, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.000000111262004, z: -0.00000022252401}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.014861086, y: 0, z: 0, w: 0.99988955}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000010331472, z: -0.00000020662944}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.029762244, y: 0, z: 0, w: 0.99955696}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000009536743, z: -0.00000019073487}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.04469356, y: 0, z: 0, w: 0.9990008}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000008742015, z: -0.0000001748403}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.059645098, y: 0, z: 0, w: 0.9982196}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000079472855, z: -0.00000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.074606806, y: 0, z: 0, w: 0.99721307}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000007152558, z: -0.00000014305115}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.08956859, y: 0, z: 0, w: 0.9959807}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000063578284, z: -0.00000012715657}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.10452029, y: 0, z: 0, w: 0.99452275}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000055631, z: -0.000000111262}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.11945179, y: 0, z: 0, w: 0.99284}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000047683713, z: -0.000000095367426}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.13435295, y: 0, z: 0, w: 0.99093354}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000039736427, z: -0.000000079472855}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.14921373, y: 0, z: 0, w: 0.988805}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000031789142, z: -0.000000063578284}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.1640242, y: 0, z: 0, w: 0.98645633}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000023841856, z: -0.000000047683713}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.17877455, y: 0, z: 0, w: 0.98389006}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000015894571, z: -0.000000031789142}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.19345516, y: 0, z: 0, w: 0.98110914}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000079472855, z: -0.000000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.20805654, y: 0, z: 0, w: 0.9781168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256956, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.00000000851495, z: -0.0000000170299}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.20701641, y: 0, z: 0, w: 0.97833747}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000170299, z: -0.0000000340598}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.19136254, y: 0, z: 0, w: 0.9815194}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000025544848, z: -0.000000051089696}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.1756193, y: 0, z: 0, w: 0.9844581}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000340598, z: -0.0000000681196}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.15979832, y: 0, z: 0, w: 0.98714966}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000042574747, z: -0.000000085149495}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.14391156, y: 0, z: 0, w: 0.9895905}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000051089696, z: -0.00000010217939}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.1279711, y: 0, z: 0, w: 0.9917779}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000059604645, z: -0.00000011920929}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.1119892, y: 0, z: 0, w: 0.9937094}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000000681196, z: -0.0000001362392}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.09597829, y: 0, z: 0, w: 0.99538344}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000007663454, z: -0.00000015326908}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.07995083, y: 0, z: 0, w: 0.9967988}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000085149495, z: -0.00000017029899}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.063919276, y: 0, z: 0, w: 0.9979551}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000009366444, z: -0.00000018732888}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.047896106, y: 0, z: 0, w: 0.9988524}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000010217939, z: -0.00000020435878}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.03189367, y: 0, z: 0, w: 0.9994913}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000011069434, z: -0.00000022138867}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.01592425, y: 0, z: 0, w: 0.99987316}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000011920929, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0.00000010430813, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: LeftWrist
+    parentNodeIndex: 6
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 1.2500002
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 1.3219998
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 20.390001
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.03
+      e10: 0
+      e11: 0.64789295
+      e12: 0.7617314
+      e13: 1.9855117
+      e20: 0
+      e21: -0.7617314
+      e22: 0.64789295
+      e23: 20.269926
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0.00000059604645, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256942, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.00000055631, z: -0.00000022252401}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256944, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000005165736, z: -0.00000020662944}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256944, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000047683716, z: -0.00000019073487}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256945, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000004371007, z: -0.0000001748403}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256945, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000003973643, z: -0.00000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256947, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000035762787, z: -0.00000014305115}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256948, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000031789145, z: -0.00000012715657}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256948, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000278155, z: -0.000000111262}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.2225695, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000023841856, z: -0.000000095367426}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.2225695, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000019868213, z: -0.000000079472855}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256951, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000015894571, z: -0.000000063578284}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256953, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000011920928, z: -0.000000047683713}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256953, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000079472855, z: -0.000000031789142}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256954, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000039736427, z: -0.000000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256954, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256956, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0.000000042574747, z: -0.0000000170299}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256954, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.000000085149495, z: -0.0000000340598}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256954, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000012772423, z: -0.000000051089696}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256953, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000017029899, z: -0.0000000681196}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256951, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000021287374, z: -0.000000085149495}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256951, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000025544847, z: -0.00000010217939}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.2225695, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000029802322, z: -0.00000011920929}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.2225695, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000034059798, z: -0.0000001362392}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256948, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000003831727, z: -0.00000015326908}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256947, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000004257475, z: -0.00000017029899}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256947, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000046832218, z: -0.00000018732888}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256945, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000051089694, z: -0.00000020435878}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256944, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.0000005534717, z: -0.00000022138867}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256944, y: 0, z: 0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0.00000059604645, z: -0.00000023841858}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0.22256942, y: -0, z: -0, w: 0.9749168}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: BottomSpine
+    parentNodeIndex: 0
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightHip
+    parentNodeIndex: 8
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.81
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.29
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.9952614
+      e01: 0.09723553
+      e02: 0
+      e03: 0
+      e10: -0.09723553
+      e11: 0.9952614
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.29
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0.0000005364418}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.16960755, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0.000000500679}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.14717074, w: 0.9891112}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000004649162}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.12465792, w: 0.99219984}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000042915343}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.102080725, w: 0.9947761}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000039339065}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.079450846, w: 0.9968388}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000035762787}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.056779914, w: 0.99838674}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000003218651}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.034079693, w: 0.99941915}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000002861023}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.011361842, w: 0.9999355}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000002503395}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.01136187, w: 0.9999355}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000021457672}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.034079693, w: 0.99941915}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000017881392}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.056779932, w: 0.99838674}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000014305114}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.07945085, w: 0.9968388}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000010728836}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.102080725, w: 0.9947761}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000007152557}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.12465793, w: 0.99219984}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.000000035762785}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.14717074, w: 0.9891112}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16960755, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0.000000038317275}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.14556505, w: 0.98934877}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000007663455}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.121436276, w: 0.9925993}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000011495182}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.0972355, w: 0.99526143}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000001532691}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.07297711, w: 0.9973337}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000019158637}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.04867546, w: 0.9988147}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000022990363}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.024344936, w: 0.9997035}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000002682209}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000003065382}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.024344964, w: 0.9997036}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000034485544}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.04867546, w: 0.9988147}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000038317273}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.07297712, w: 0.9973336}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000042148997}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.0972355, w: 0.99526143}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.00000045980727}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.121436276, w: 0.9925993}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000004981245}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.14556505, w: 0.98934877}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0.0000005364418}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.16960755, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightKnee
+    parentNodeIndex: 9
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.9499999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.24999994
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -3.33
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.04
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.95029193
+      e01: 0.31136024
+      e02: 0
+      e03: -0.18960927
+      e10: -0.31136024
+      e11: 0.95029193
+      e12: 0
+      e13: -3.3207595
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.04
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: -0.000000059604645}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.000000059604645, w: 1.0000001}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000055631002}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.011317432, w: 0.9999359}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000005165736}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.022652347, w: 0.9997434}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000047683717}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.034000464, w: 0.9994218}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000043710074}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.045357417, w: 0.99897087}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000039736427}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.056718796, w: 0.9983902}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000003576279}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.068080194, w: 0.9976798}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000031789142}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.07943718, w: 0.9968398}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000278155}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.09078535, w: 0.9958705}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000023841856}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.102120265, w: 0.994772}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000019868214}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.11343753, w: 0.9935452}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.124732785, w: 0.99219036}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000011920928}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.13600168, w: 0.9907086}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000079472855}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.14723994, w: 0.9891009}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000039736427}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.15844329, w: 0.9873681}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16960755, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000004257475}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.15764429, w: 0.98749596}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000000851495}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.1456365, w: 0.98933816}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000012772424}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.13358936, w: 0.99103683}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000170299}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.12150806, w: 0.9925904}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000021287374}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.10939795, w: 0.99399805}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000025544848}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.09726434, w: 0.99525857}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000029802322}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.085112646, w: 0.9963713}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000340598}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.07294826, w: 0.9973357}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000003831727}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.060776666, w: 0.9981514}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000042574747}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.048603255, w: 0.99881816}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000004683222}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.03643351, w: 0.9993361}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000051089696}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.024272801, w: 0.9997053}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000005534717}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.01212654, w: 0.9999265}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000059604645}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.000000059604645, w: 1.0000001}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: RightAnkle
+    parentNodeIndex: 10
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.7299999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -5.06
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.04
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.79153043
+      e01: 0.6111297
+      e02: 0
+      e03: -0.72826254
+      e10: -0.6111297
+      e11: 0.79153043
+      e12: 0
+      e13: -4.9647646
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 16.04
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: -0.00000023841858, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16960771, w: 0.98551184}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: -0.00000022252401, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960768, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000020662944, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960768, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000019073487, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960767, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.0000001748403, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960765, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000015894571, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960764, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000014305115, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960764, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000012715657, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960762, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000111262, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960761, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000095367426, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.1696076, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000079472855, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.1696076, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000063578284, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960758, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000047683713, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960758, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000031789142, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960756, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000015894571, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960756, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16960755, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: -0.0000000170299, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960756, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.0000000340598, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960758, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000051089696, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960758, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.0000000681196, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960758, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.000000085149495, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.1696076, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000010217939, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960761, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000011920929, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960762, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.0000001362392, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960762, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000015326908, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960764, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000017029899, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960765, w: 0.98551166}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000018732888, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960767, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000020435878, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960767, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000022138867, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: -0.16960768, w: 0.9855117}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: -0.00000023841858, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16960771, w: 0.98551184}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: LeftHip
+    parentNodeIndex: 8
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.83
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.9909832
+      e01: -0.13398613
+      e02: 0
+      e03: 0
+      e10: 0.13398613
+      e11: 0.9909832
+      e12: 0
+      e13: -1.38
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: -0.000000059604645}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000055631002}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.20241697, w: 0.9792994}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000005165736}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.17161386, w: 0.9851643}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000047683717}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.14064203, w: 0.99006057}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000043710074}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.10953191, w: 0.99398327}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000039736427}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.07831409, w: 0.99692863}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000003576279}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.04701927, w: 0.99889404}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000031789142}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.015678216, w: 0.999877}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000278155}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.01567824, w: 0.999877}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000023841856}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.047019277, w: 0.998894}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000019868214}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.07831411, w: 0.9969287}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000015894571}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.109531924, w: 0.99398327}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000011920928}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.14064205, w: 0.99006057}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000079472855}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.17161386, w: 0.9851643}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000039736427}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.20241697, w: 0.97929937}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: -0.000000004257475}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.200223, w: 0.97975034}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000000851495}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.16719896, w: 0.98592323}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000012772424}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.13398618, w: 0.99098325}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000170299}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.10062217, w: 0.9949247}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000021287374}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.0671446, w: 0.9977431}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000025544848}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.033591248, w: 0.99943566}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000029802322}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.0000000340598}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.033591274, w: 0.99943566}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000003831727}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.0671446, w: 0.9977431}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000042574747}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.10062219, w: 0.99492466}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000004683222}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.13398618, w: 0.99098325}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000051089696}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.16719896, w: 0.98592323}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.00000005534717}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.20022297, w: 0.97975034}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: -0.000000059604645}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: LeftKnee
+    parentNodeIndex: 12
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.9499999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -3.33
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.90600234
+      e01: -0.42327255
+      e02: 0
+      e03: 0.26127294
+      e10: 0.42327255
+      e11: 0.90600234
+      e12: 0
+      e13: -3.312417
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: -0.00000011920929, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: -0.000000111262004, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.015561415, w: 0.99987894}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000010331472, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.031168783, w: 0.99951416}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000009536743, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.046810847, w: 0.99890375}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000008742015, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.062476184, w: 0.99804646}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000079472855, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.07815325, w: 0.9969413}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000007152558, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.09383041, w: 0.9955882}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000063578284, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.10949595, w: 0.9939872}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000055631, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.12513824, w: 0.99213934}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000047683713, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.1407456, w: 0.9900458}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000039736427, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.1563065, w: 0.9877086}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000031789142, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.17180952, w: 0.9851302}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000023841856, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.18724337, w: 0.9823135}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000015894571, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.20259707, w: 0.9792622}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000000079472855, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2178598, w: 0.9759801}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: -0.00000000851495, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.21677285, w: 0.9762221}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000000170299, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.20040901, w: 0.9797123}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000025544848, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.18394251, w: 0.982937}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000000340598, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.16738664, w: 0.9858913}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000042574747, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.15075508, w: 0.9885711}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000051089696, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.13406174, w: 0.990973}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000059604645, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.11732073, w: 0.9930941}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.0000000681196, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.1005463, w: 0.9949324}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000007663454, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.08375283, w: 0.99648654}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.000000085149495, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.06695465, w: 0.997756}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000009366444, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.050166145, w: 0.9987409}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000010217939, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.0334015, w: 0.99944204}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000011069434, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.016674848, w: 0.999861}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: -0.00000011920929, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: LeftAnkle
+    parentNodeIndex: 13
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -1.7299999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: -5.06
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 0.6157801
+      e01: -0.78791803
+      e02: 0
+      e03: 0.9935345
+      e10: 0.78791803
+      e11: 0.6157801
+      e12: 0
+      e13: -4.879801
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.93
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0.0000004172325, y: 0.00000047683716, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.23302111, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0.000000389417, y: 0.00000044504802, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302111, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000003616015, y: 0.00000041325887, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000333786, y: 0.00000038146973, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000003059705, y: 0.0000003496806, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000278155, y: 0.00000031789142, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000002503395, y: 0.0000002861023, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000022252401, y: 0.00000025431314, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000019470849, y: 0.000000222524, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000016689299, y: 0.00000019073485, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000001390775, y: 0.00000015894571, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000111262, y: 0.00000012715657, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000083446494, y: 0.000000095367426, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000055631, y: 0.000000063578284, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000000278155, y: 0.000000031789142, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0.000000029802322, y: 0.0000000340598, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302105, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.000000059604645, y: 0.0000000681196, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000008940697, y: 0.00000010217939, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000011920929, y: 0.0000001362392, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000014901161, y: 0.00000017029899, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302107, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000017881393, y: 0.00000020435878, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000020861626, y: 0.00000023841858, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000023841858, y: 0.0000002724784, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302108, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000002682209, y: 0.00000030653817, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000029802322, y: 0.00000034059798, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000032782555, y: 0.00000037465776, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.00000035762787, y: 0.00000040871757, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.2330211, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000003874302, y: 0.00000044277735, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0.23302111, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0.0000004172325, y: 0.00000047683716, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: 0.23302111, w: 0.9724717}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+  - name: Head
+    parentNodeIndex: 0
+    boneLength: 0
+    localBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.322
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 2.6
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    globalBaseTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.322
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 2.6
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    currentTransform:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.322
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 2.6
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 17.1
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    keyFrames:
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 0
+    - keyPosition: {x: 0, y: 0, z: 0}
+      keyRotation: {x: 0, y: 0, z: 0}
+      keyQRotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      atFrame: 29

@@ -41,14 +41,16 @@ public class AnimationHierarchyEditor : EditorWindow
 		if (!animData)
 		{
 			GUILayout.Label("Need AnimationData");
+
+		}
+		else
+		{
 			createNewHierarchy = EditorGUILayout.Toggle("Create New Hierarchy", createNewHierarchy);
 			if (createNewHierarchy)
 			{
 				newHierarchy();
 			}
-		}
-		else
-		{
+
 			modifyAnimationData();
 			drawPrimaryKeys();
 		}
@@ -177,8 +179,9 @@ public class AnimationHierarchyEditor : EditorWindow
 				updatePrioKeySet[currentKeyFrame] = currentCheck;
 				//find the next and previous keyframes
 				int previous = findPrimaryKeyFrame(0, currentKeyFrame);
-				int next = findPrimaryKeyFrame(updatePrioKeySet.Length, currentKeyFrame);
+				int next = findPrimaryKeyFrame(updatePrioKeySet.Length-1, currentKeyFrame);
 
+				Debug.Log(currentCheck);
 				//if true then it is a primary key, update previous to this and this to next
 				if(currentCheck)
 				{
@@ -187,6 +190,8 @@ public class AnimationHierarchyEditor : EditorWindow
 				}
 				else
 				{
+					Debug.Log(previous);
+					Debug.Log(next);
 					//false then it is not a primary key anymore, update previous to next
 					lerpBetweenFrames(previous, next);
 				}
@@ -263,7 +268,7 @@ public class AnimationHierarchyEditor : EditorWindow
         {
 			//find lerp parameter -> i /(to-from)
 			float param = (float)(i-from) / (float)(to - from);
-			Debug.Log(param);
+
 			for(int jointID = 0; jointID < animData.poseBase.Length; jointID++)
 			{
 				//set keyframe with from and to and lerp using parameter 
@@ -280,7 +285,7 @@ public class AnimationHierarchyEditor : EditorWindow
 		Vector3 localPosition = animData.poseBase[jointID].getLocalPosition();
 		Vector3 localRotation = animData.poseBase[jointID].getLocalRotationEuler();
 
-		KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.rotation, poseObj.localScale, animData.keyFrameCount - 1);
+		KeyFrame newKey = new KeyFrame(poseObj.localPosition - localPosition, poseObj.localRotation, poseObj.localScale, animData.keyFrameCount - 1);
 
 		animData.poseBase[jointID].keyFrames[frameNumber] = newKey;
 	}
