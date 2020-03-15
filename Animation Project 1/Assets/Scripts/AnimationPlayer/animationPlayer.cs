@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class animationPlayer : MonoBehaviour
 {
-
-    public AnimationData animData;
+    
+    public AnimationDataSingle animData;
 
     public bool play = false;
 
@@ -52,4 +52,6 @@ public class animationPlayer : MonoBehaviour
 
         }
     }
+
+    
 }

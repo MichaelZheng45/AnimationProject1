@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47eef20a7fa55f43b4c21e3b76c4361, type: 3}
+  m_Name: blendingtree2
+  m_EditorClassIdentifier: 
+  NodeTree:
+  - prevIndex: -1
+    currentIndex: 0
+    nextID1: -1
+    nextID2: -1
+    nodeType: -1
+    parameter1: 0
+    parameter2: 0
+    clip: {fileID: 0}
